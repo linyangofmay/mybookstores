@@ -14,7 +14,7 @@ def seed_users():
     meimeihan = User(
         username='meimeihan', email='meimeihan@aa.io', firstName="Meimeihan", lastName='Palmer',password='password')
     vera = User(
-        username='vera', email='vera@aa.io', firstName="Vera", lastName='Kline', password='password')
+        username='vera', email='vera@aa.io', firstName="Vera", lastName="Kline", password='password')
     brant = User(
         username='brant', email='brant@aa.io', firstName="Brant", lastName='Soukup', password='password')
     jeffie = User(
