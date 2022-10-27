@@ -13,6 +13,10 @@ class User(db.Model, UserMixin):
     firstName = db.Column(db.String(255), nullable=False)
     lastName = db.Column(db.String(255), nullable=False)
 
+    bookstores = db.relationship('Bookstore', back_populates='user', cascade = 'all,delete')
+    reviews = db.relationship('Review', back_populates='user', cascade = 'all,delete')
+   
+
     @property
     def password(self):
         return self.hashed_password
