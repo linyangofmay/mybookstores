@@ -10,7 +10,7 @@ class Review(db.Model):
     review = db.Column(db.String(1000), nullable=False)
     stars = db.Column(db.Integer, nullable=False)
     bookstoreId = db.Column(db.Integer, db.ForeignKey('bookstores.id'), nullable=False)
-    reviewImg = db.Column(db.String(1000))
+    # reviewImg = db.Column(db.String(1000))
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     createdAt = db.Column(db.DateTime, nullable=False)
     updatedAt = db.Column(db.DateTime, nullable=False)
@@ -25,10 +25,10 @@ class Review(db.Model):
             'review': self.review,
             'stars': self.stars,
             'bookstoreId':self.bookstoreId,
-            'reviewImg':self.reviewImg,
-            'bookstoreImg': self.product.previewImage if self.product else None,
-            'bookstorename': self.product.name if self.product else None,
-            'bookstorecategory': self.product.category if self.product else None,
+            # 'reviewImg':self.reviewImg,
+            # 'bookstoreImg': self.image if self.image else None,
+            'bookstorename': self.bookstore.name if self.bookstore else None,
+            'bookstorecategory': self.bookstore.category if self.bookstore else None,
             'userId':self.userId,
             'createdAt':self.createdAt,
             'updatedAt':self.updatedAt,

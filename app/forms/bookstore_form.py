@@ -25,16 +25,12 @@ def price_validation(form, field):
     if price <= 0 or price>=1000000:
         raise ValidationError("Valid price must be within the range $0.00 and $1000000.00")
 
-def highlights_validation(form, field):
-    hl = field.data
-    if len(hl) < 5 or len(hl) > 100:
-        raise ValidationError("highlights must be more than 5 characters and less than 100 characters")
+# def highlights_validation(form, field):
+#     hl = field.data
+#     if len(hl) < 5 or len(hl) > 100:
+#         raise ValidationError("highlights must be more than 5 characters and less than 100 characters")
 
-# def imageURL_validation(form, field):
-#     img = field.data
-#     if not img[-3:] == 'jpg' and (not img[-3:] == 'png') and img[-4:] != 'jpeg' and img[-4:] != 'webp' and img[-3:] != 'gif' and img[-3:] != 'svg':
 
-#         raise ValidationError("Input must be a valid Image Url")
 
 Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
 

@@ -63,3 +63,5 @@ class Bookstore(db.Model):
             'avgstars': self.get_avgstars(),
             'images': [image.to_dict() for image in self.images]
         }
+
+        

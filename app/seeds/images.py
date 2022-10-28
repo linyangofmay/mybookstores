@@ -3,27 +3,27 @@ from app.models import db, Image
 
 def seed_images():
     i1 =Image(
-      url = 'https://images.unsplash.com/photo-1531674842274-9563aa15686f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
+      url = 'https://images.unsplash.com/photo-1570049795242-90ce0816f888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       bookstoreId = 1
     )
     i2 =Image(
-      url= "https://images.unsplash.com/photo-1587377118541-d16160326b39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      url= "https://images.unsplash.com/photo-1572375755724-4be9f9e8e7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       bookstoreId = 1
     )
     i3 =Image(
-      url = 'https://images.unsplash.com/photo-1532682908332-165811c1f832?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
+      url = 'https://images.unsplash.com/photo-1571075002844-e5180c614639?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       bookstoreId = 1
     )
     i4 =Image(
-      url = 'https://images.unsplash.com/photo-1509565118126-4f0ff5aec05d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80',
+      url = 'https://images.unsplash.com/photo-1583679269357-ef97858461de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80',
       bookstoreId = 2
     )
     i5 =Image(
-      url = 'https://images.unsplash.com/photo-1588979657293-6398a0c25726?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      url = 'https://images.unsplash.com/photo-1586459246491-f456f2ca5908?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQxfHxib29rc3RvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
       bookstoreId = 2
     )
     i6 =Image(
-      url = 'https://images.unsplash.com/photo-1588979657293-6398a0c25726?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGFuc2lhbiUyMGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+      url = 'https://images.unsplash.com/photo-1583526241256-cb18e8635e5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       bookstoreId = 2
     )
     i7 =Image(
@@ -31,11 +31,11 @@ def seed_images():
       bookstoreId = 3
     )
     i8 =Image(
-      url = 'https://images.unsplash.com/photo-1570939276551-59a90ac1b80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      url = 'https://images.unsplash.com/photo-1605344178743-4313131d2c89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       bookstoreId = 3
     )
     i9 =Image(
-      url = 'https://images.unsplash.com/photo-1662476722258-d77afb14430b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hha2VzcGVhcmUlMjBhbmQlMjBjb21wYW55JTIwcGFyaXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+      url = 'https://images.unsplash.com/photo-1578311639859-c8679fccd561?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM4fHxib29rc3RvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
       bookstoreId = 3
     )
     i10 =Image(
