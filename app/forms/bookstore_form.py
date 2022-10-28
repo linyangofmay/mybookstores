@@ -4,7 +4,7 @@ from wtforms.fields import (
     SelectField, SelectMultipleField, TextAreaField, SubmitField, IntegerField, FloatField, DecimalField
 )
 from wtforms.validators import DataRequired, Email, ValidationError
-from app.models import Product
+from app.models import Bookstore
 from decimal import ROUND_HALF_UP
 
 
@@ -37,7 +37,7 @@ Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "mult
 
 
 
-class bookstoreForm(FlaskForm):
+class BookstoreForm(FlaskForm):
     name = StringField("Product Name", validators= [DataRequired(), name_validation])
     description = TextAreaField("Product Description", validators= [DataRequired(), description_validation])
     price = DecimalField("Price", validators=[DataRequired(), price_validation], places=2, rounding = ROUND_HALF_UP)

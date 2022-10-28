@@ -70,6 +70,7 @@ export const thunkGetOneBookstore = (id) => async dispatch =>{
 }
 
 
+
 //reducers
 const initialState = {}
 const bookstoreReducer = (state =initialState, action) =>{
