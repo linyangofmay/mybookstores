@@ -8,7 +8,7 @@ import './BookstoreList.css'
 function BookstoreList() {
   const bookstore = useSelector((state) => state.bookstore)
   const allbookstores = Object.values(bookstore)
-  console.log('allbookstores---------', allbookstores);
+  //console.log('allbookstores---------', allbookstores);
   const dispatch = useDispatch()
 
   const user = useSelector((state) => state.session)
@@ -19,22 +19,38 @@ function BookstoreList() {
 
 
   return (
-      <>
-      <div className='homepage-background-container homepage-img'>
-      {allbookstores &&
+    <>
+    <div className = 'homepage_outermost'>
+      <span>Hello</span>
+      <div className="homepage-background-outercontainer">
+        <div className='homepage-background-container homepage-img'>
+          {/* {allbookstores &&
+            allbookstores.map((bookstore) => (
+              <div>
+                {bookstore?.name}
+              </div>
+            ))
+          } */}
+
+        </div>
+
+
+
+
+
+
+      </div>
+        <div className='recently_activities'>
+        {allbookstores &&
           allbookstores.slice(0,9).map((bookstore) => (
             <div>
               {bookstore?.name}
             </div>
           ))
         }
-
-      </div>
-
-      <div>
-
-     </div>
-     </>
+        </div>
+    </div>
+    </>
   )
 }
 

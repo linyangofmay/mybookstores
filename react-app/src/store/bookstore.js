@@ -1,87 +1,147 @@
 //Types
-const createBookstore = '/bookstore/createBookstore'
 const getAllBookstore = '/bookstore/getAllBookstore'
-const getCurrentBookstore = '/bookstore/getCurrentBookstore'
 const getOneBookstore = '/bookstore/getOneBookstore'
+const getCurrentBookstore = '/bookstore/getCurrentBookstore'
+const createBookstore = '/bookstore/createBookstore'
 const updateBookstore = '/bookstore/updateBookstore'
 const deleteBookstore = '/bookstore/deleteBookstore'
 
 //Actions
 
-const actionGetAllBookstore = (bookstores) =>{
+const actionGetAllBookstore = (bookstores) => {
   return {
-    type:getAllBookstore,
+    type: getAllBookstore,
     bookstores
   }
 }
 
-const actionGetOneBookstore = (bookstore) =>{
+const actionGetOneBookstore = (bookstore) => {
   return {
     type: getOneBookstore,
     bookstore
   }
 }
 
-const actionGetCurrentBookstore = (bookstores) =>{
+const actionGetCurrentBookstore = (bookstores) => {
   return {
     type: getCurrentBookstore,
     bookstores
   }
 }
 
+const actionCreateBookstore = (bookstore) => {
+  return {
+      type: createBookstore,
+      bookstore
+  }
+}
+
 const actionUpdateBookstore = (bookstore) => {
   return {
-      type: updateBookstore,
-      bookstore
+    type: updateBookstore,
+    bookstore
   }
 }
 
 const actionDeleteBookstore = (id) => {
   return {
-      type: deleteBookstore,
-      id
+    type: deleteBookstore,
+    id
   }
 }
 
 
 
 //Thunks
-export const thunkGetAllBookstore = ()=> async dispatch =>{
+export const thunkGetAllBookstore = () => async dispatch => {
   const res = await fetch("/api/bookstores/", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
   });
-  if (res.ok){
-     const data = await res.json()
-     dispatch(actionGetAllBookstore(data))
+  if (res.ok) {
+    const data = await res.json()
+    dispatch(actionGetAllBookstore(data))
   }
 }
 
-export const thunkGetOneBookstore = (id) => async dispatch =>{
-   const res = await fetch(`/api/bookstores/${id}`, {
+export const thunkGetOneBookstore = (id) => async dispatch => {
+  const res = await fetch(`/api/bookstores/${id}`, {
     method: "GET",
-    header: {"Content-Type": "application/json"},
-   });
+    header: { "Content-Type": "application/json" },
+  });
 
-   if (res.ok) {
+  if (res.ok) {
     const data = await res.json()
     dispatch(actionGetOneBookstore(data))
-   }
+  }
 }
+
+export const thunkGetCurrentBookstore = () => async dispatch => {
+  const res = await fetch('/api/bookstores/current', {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  })
+
+  if (res.ok) {
+    const data = await res.json()
+    dispatch(actionGetCurrentBookstore(data))
+  }
+}
+
+export const thunkCreateBookstore = (bookstore) => async dispatch => {
+  const res = await fetch('/api/bookstores/new', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(bookstore)
+  })
+  if (res.ok) {
+      const data = await res.json()
+      dispatch(actionCreateBookstore(data))
+      return data
+  }
+}
+
+export const thunkUpdateBookstore = (bookstore) => async dispatch => {
+  const res = await fetch(`/api/bookstores/${bookstore.id}/edit`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(bookstore),
+  });
+  //console.log('bookstore-----------', bookstore)
+
+  if (res.ok) {
+      const data = await res.json()
+      dispatch(actionUpdateBookstore(data))
+      return data
+  }
+}
+
+export const thunkDeleteBookstore = (id) => async dispatch => {
+  const res = await fetch(`/api/bookstores/${id}`, {
+      method: 'DELETE'
+  })
+
+  if (res.ok) {
+      dispatch(actionDeleteBookstore(id))
+  }
+}
+
+
+
 
 
 
 //reducers
 const initialState = {}
-const bookstoreReducer = (state =initialState, action) =>{
-  let newState= {...state}
-  switch (action.type){
+const bookstoreReducer = (state = initialState, action) => {
+  let newState = { ...state }
+  switch (action.type) {
     case getAllBookstore:
-      newState ={};
+      newState = {};
       //console.log('action.bookstores.bookstores--------', action.bookstores)
       //console.log('action--------', action)
       action.bookstores.bookstores.forEach((bookstore) => {
-        newState[bookstore.id] =bookstore;
+        newState[bookstore.id] = bookstore;
       })
       return newState;
 
@@ -90,10 +150,23 @@ const bookstoreReducer = (state =initialState, action) =>{
       newState[action.bookstore.id] = action.bookstore
       return newState
 
+    case getCurrentBookstore:
+      newState ={};
+      action.bookstores.bookstores.forEach((bookstore) =>{
+        newState[bookstore.id] = bookstore;
+      });
+      return newState;
 
+    case updateBookstore:
+      newState[action.bookstore.id] = action.bookstore
+      return newState;
 
-   default:
-     return state;
+    case deleteBookstore:
+      delete newState[action.id]
+      return newState;
+
+    default:
+      return state;
   }
 }
 
