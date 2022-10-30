@@ -14,11 +14,11 @@ function BookstoreDetail(){
   const {id} = useParams();
   const dispatch = useDispatch();
   const history = useHistory();
-  const bookstore = useSelector((state)=> state.product[id]);
+  const bookstore = useSelector((state)=> state.bookstore[id]);
   const user = useSelector((state) => state.session.user);
   const review = useSelector((state)=> state.review);
 
-  const reviewArray
+
 
 
 }

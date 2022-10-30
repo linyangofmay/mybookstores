@@ -226,8 +226,8 @@ def seed_reviews():
         userId = 2,
         stars = 5,
         review = 'Phenomenal and large bookstore. A standout and a gem of a treasure trove. Not just New books but plenty of Used as well. ',
-        createdAt= now,
-        updatedAt= now,
+        createdAt= now ,
+        updatedAt= now ,
     )
     review29 = Review(
         bookstoreId = 9,

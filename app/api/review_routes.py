@@ -9,6 +9,12 @@ now = datetime.now()
 
 review_routes = Blueprint('reviews', __name__)
 
+#get all reviews
+@review_routes.route('/')
+def get_all_reviews():
+    reviews = Review.query.all()
+    return {'reviews':[review.to_dict() for review in reviews]}
+
 #get reviews based on bookstoreId
 @review_routes.route('/bookstores/<int:id>')
 def get_bookstore_reviews(id):
@@ -51,7 +57,7 @@ def create_review(id):
 #update a review
 @review_routes.route('/<int:reviewId>', methods=['PUT'])
 @login_required
-def update_product_review(reviewId):
+def updat_bookstore_review(reviewId):
     # print(reviewId)
     form = ReviewForm()
     form['csrf_token'].data=request.cookies['csrf_token']

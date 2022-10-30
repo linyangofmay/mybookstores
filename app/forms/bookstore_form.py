@@ -38,7 +38,7 @@ Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "mult
 
 
 class BookstoreForm(FlaskForm):
-    name = StringField("Product Name", validators= [DataRequired(), name_validation])
-    description = TextAreaField("Product Description", validators= [DataRequired(), description_validation])
+    name = StringField("Bookstore Name", validators= [DataRequired(), name_validation])
+    description = TextAreaField("Bookstore Description", validators= [DataRequired(), description_validation])
     price = DecimalField("Price", validators=[DataRequired(), price_validation], places=2, rounding = ROUND_HALF_UP)
     category = SelectField("Category",choices = Categories_Choices, validators=[DataRequired()])

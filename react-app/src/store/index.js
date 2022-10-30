@@ -2,10 +2,17 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import session from './session';
 import bookstoreReducer from './bookstore';
+import reviewReducer from './review';
+import imageReducer from './image';
+
+
 
 const rootReducer = combineReducers({
   session,
   bookstore: bookstoreReducer,
+  review: reviewReducer,
+  image: imageReducer,
+
 });
 
 

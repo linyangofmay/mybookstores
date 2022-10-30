@@ -8,6 +8,9 @@
 }
 .homepage-background-outercontainer{
   position: relative;
+
+
+
   /* background: linear-gradient(90deg,#0006,#0000001a 55%); */
   display: flex;
   flex-direction: row;
@@ -19,6 +22,7 @@
   height: 700px;
   top: -120px;
   box-sizing:border-box;
+  z-index:-1;
 
 }
 
@@ -45,11 +49,66 @@
   background-size:cover;
   /* background-repeat: no-repeat; */
   object-fit: cover;
+  z-index:-1;
 
 
 
 }
+.homepage_title_container{
+  display:flex;
+  justify-content:center;
 
-.recently_activities{
-  top:120px;
+}
+.homepage_title{
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.recently_activities_container{
+  top:30px;
+  display:flex;
+  margin-left:150px;
+  margin-right:150px;
+  justify-content: center;
+  align-items:center;
+
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:40px;
+  position:relative;
+
+}
+
+.recently_activities_subcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1290px;
+}
+.recent_activity_card{
+  width:330px;
+  height:330px;
+  padding: 10px;
+  margin:30px;
+  border: solid 1px lightgrey;
+  display:flex;
+  justify-content: center;
+ 
+
+}
+
+.recent_activity_image{
+  height:90px;
+  width:320px;
+  object-fit:cover;
+}
+.homepage_navlink{
+  text-decoration: none;
+
+  justify-self:center;
+  align-items:center;
+  padding:5px;
+
 }

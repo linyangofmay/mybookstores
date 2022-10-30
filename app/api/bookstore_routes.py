@@ -77,7 +77,7 @@ def update_bookstore(id):
     if edit_bookstore is None:
         return {"errors" : "Bookstore couldn't be found"}, 404
     if edit_bookstore.userId != current_user.id:
-        return {"errors" : "You don't have the right to edit the product"}, 403
+        return {"errors" : "You don't have the right to edit the bookstore"}, 403
 
     if form.validate_on_submit():
         edit_bookstore.name = form.data['name'],

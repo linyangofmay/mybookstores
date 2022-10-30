@@ -8,10 +8,14 @@ now = datetime.now()
 
 image_routes = Blueprint("images", __name__)
 
+
+
+
 # get images based on bookstoreId
 @image_routes.route('/bookstores/<int:id>')
 def get_bookstore_images(id):
   bookstore_images = Image.query.filter(Image.bookstoreId == id).all()
+  print('bookstore_images----------', bookstore_images)
   return {'bookstore_images':[image.to_dict() for image in bookstore_images]}
 
 @image_routes.route('/bookstores/<int:id>', methods=['POST'])
