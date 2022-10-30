@@ -45,45 +45,84 @@ function LoggedoutBookstoreList() {
 
 
 
-  return (
+    return (
 
-    <div className='homepage_outermost'>
+      <div className='homepage_outermost'>
 
-      <div className="homepage-background-outercontainer">
-        <div className='homepage-background-container homepage-img'></div>
+        <div className="homepage-background-outercontainer">
+          <div className='homepage-background-container homepage-img'></div>
+        </div>
 
-      </div>
+        <div className='homepage_title_container'>
+          <div className='homepage_title'>Recent Activity </div>
+        </div>
 
-      <div className='recently_activities'>
-      {allbookstores &&
-              allbookstores.slice(0,15).map((bookstore) => (
-                <div key={bookstore.id}>
-                  <NavLink
-                    to={`/bookstores/${bookstore.id}`}
-                    className="product_navlink"
-                  >
-                    <img
-                      src={bookstore?.images[0]?.url}
-                      alt="bookstore"
-                      className="productlist_image"
-                    ></img>
+        <div className='recently_activities_container'>
+          <div className='recently_activities_subcontainer'>
+            {allbookstores &&
+              allbookstores.slice(0,12).map((bookstore) => (
+                <div className='recent_activity_card' key={bookstore.id}>
+                  {/* <NavLink
+                  to={`/bookstores/${review.bookstoreId}`}
+                  className="hompage_navlink"
+                > */}
 
+                  <div className='recent_activity_user_container'>
 
-                    <div className="review_inner_line_div">
-                      <div>
-                        <span style={{ fontSize: "25pt" }}>
-                          {Math.round(bookstore?.avgstars)} reviews&nbsp;
-                        </span>
-                      </div>
+                    <div className='ra_user_profile'><i className="fas fa-user-circle fa-lg" /> User Prof </div>
+
+                    <div className='recenty_activity_user_name_container'>
+                      <div className='ra_user_name'>{bookstore?.reviews[0]?.firstName}&nbsp; {bookstore?.reviews[0]?.lastName.slice(0, 1)}. </div>
+                      <div className='ra_user_name_wrote'>Wrote a review</div>
                     </div>
-                  </NavLink>
+
+
+                  </div>
+
+
+                  <i className="fas fa-user-circle fa-2x" />
+
+                  <img className='recent_activity_image'
+                    src={bookstore?.images[0]?.url}
+                    alt="bookstore"
+
+                  />
+
+                  <div className ='ra_bookstorename_container'>
+                    <NavLink className='ra_bs_name'  to={`/bookstores/${bookstore.id}`}>
+                     {bookstore.name}
+                    </NavLink>
+                  </div>
+
+                  <div className='ra_reviewstars'>📙 </div>
+                  <div style = {{fontweight:"700"}} className='ra_review' >
+                    {bookstore?.reviews[0]?.review.slice(0,83) + '...'}
+                  </div>
+
+
+
+                  <div className ='ra_bookstorename_container'>
+                    <NavLink className='ra_bs_name'  to={`/bookstores/${bookstore.id}`}>
+                     Continue reading
+                    </NavLink>
+                  </div>
+
+
+
+
+
+
+
+
+                  {/* </NavLink> */}
                 </div>
+
               ))}
-
+          </div>
+        </div>
       </div>
-    </div>
 
-  )
+    )
 }
 
 export default LoggedoutBookstoreList

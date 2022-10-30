@@ -57,15 +57,29 @@ function LoggedinBookstoreList() {
       </div>
 
       <div className='recently_activities_container'>
-       <div className= 'recently_activities_subcontainer'>
-        {reviewArr &&
-          reviewArr.reverse().slice(0, 15).map((review) => (
-            <div className='recent_activity_card' key={review.bookstoreId}>
-              <NavLink
+        <div className='recently_activities_subcontainer'>
+          {reviewArr &&
+            reviewArr.reverse().slice(0, 12).map((review) => (
+              <div className='recent_activity_card' key={review.bookstoreId}>
+                {/* <NavLink
                 to={`/bookstores/${review.bookstoreId}`}
                 className="hompage_navlink"
-              >
-                 <i className="fas fa-user-circle fa-2x" />
+              > */}
+
+                <div className='recent_activity_user_container'>
+
+                  <div className='ra_user_profile'><i className="fas fa-user-circle fa-lg" /> User Prof </div>
+
+                  <div className='recenty_activity_user_name_container'>
+                    <div className='ra_user_name'>{review?.firstName}&nbsp; {review?.lastName.slice(0, 1)}. </div>
+                    <div className='ra_user_name_wrote'>Wrote a review</div>
+                  </div>
+
+
+                </div>
+
+
+                <i className="fas fa-user-circle fa-2x" />
 
                 <img className='recent_activity_image'
                   src={allbookstores[review.bookstoreId - 1]?.images[0]?.url}
@@ -73,13 +87,36 @@ function LoggedinBookstoreList() {
 
                 />
 
+                <div className ='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name'  to={`/bookstores/${review.bookstoreId}`}>
+                   {review.bookstorename}
+                  </NavLink>
+                </div>
+
+                <div className='ra_reviewstars'>📙 </div>
+                <div style = {{fontweight:"700"}} className='ra_review' >
+                  {review?.review.slice(0,83) + '...'}
+                </div>
+
+
+
+                <div className ='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name'  to={`/bookstores/${review.bookstoreId}`}>
+                   Continue reading
+                  </NavLink>
+                </div>
 
 
 
 
-              </NavLink>
-            </div>
-          ))}
+
+
+
+
+                {/* </NavLink> */}
+              </div>
+
+            ))}
         </div>
       </div>
     </div>

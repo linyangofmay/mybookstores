@@ -22,6 +22,7 @@
   height: 700px;
   top: -120px;
   box-sizing:border-box;
+
   z-index:-1;
 
 }
@@ -73,8 +74,8 @@
   justify-content: center;
   align-items:center;
 
-  flex-direction:row;
-  flex-wrap:wrap;
+  /* flex-direction:row;
+  flex-wrap:wrap; */
   gap:40px;
   position:relative;
 
@@ -88,27 +89,77 @@
   width: 1290px;
 }
 .recent_activity_card{
-  width:330px;
-  height:330px;
-  padding: 10px;
+  width:345px;
+  height:345px;
+  /* padding: 10px; */
   margin:30px;
   border: solid 1px lightgrey;
+  border-radius: 15px;
+  /* display:flex;
+  justify-content: center; */
+
+
+}
+.recent_activity_user_container{
   display:flex;
-  justify-content: center;
- 
-
-}
-
-.recent_activity_image{
-  height:90px;
-  width:320px;
-  object-fit:cover;
-}
-.homepage_navlink{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:15px;
+  /* margin:10px; */
+  column-gap: 10px;
   text-decoration: none;
 
-  justify-self:center;
-  align-items:center;
-  padding:5px;
 
+
+}
+/* .recently_activity_user_name_container{
+
+} */
+.ra_user_name{
+  text-decoration: none;
+  font-weight:700;
+
+}
+.ra_user_name_wrote{
+  color: rgb(170, 170, 170);
+  text-decoration: none
+}
+.recent_activity_image{
+  height:90px;
+  width:345px;
+  object-fit:cover;
+}
+.ra_bookstorename_container{
+  padding:15px;
+}
+.ra_bookstorename_container:hover{
+  cursor:pointer;
+}
+
+.ra_bs_name{
+  text-decoration: none;
+  color:#027a97;
+  font-size:14px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family:sans-serif
+}
+
+.ra_review{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left:15px;
+  padding-top:5px;
+  font-size: 16;
+  /* width:330px;
+  height: 50px; */
+  font-weight:500px;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.ra_reviewstars{
+  padding-left:15px;
 }
