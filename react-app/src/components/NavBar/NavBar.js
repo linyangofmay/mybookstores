@@ -14,10 +14,19 @@ function NavBar () {
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
   const [showMenu, setShowMenu] = useState(false);
+
   const OpenMenu =() =>{
     if (showMenu)  return;
     setShowMenu(true)
   }
+
+  const forBusiness =()=>{
+    if (sessionUser) {history.push('/bookstores/new')} else {
+      alert(`Please sign in to list a bookstore`)
+      history.push('/')
+    };
+   }
+   
   let sessionLinks;
   if (!sessionUser){
     sessionLinks =(
@@ -41,31 +50,29 @@ function NavBar () {
 
   return (
     <nav className='nav_container'>
-      <ul>
-        <li>
-          <NavLink to='/' exact={true} activeClassName='active'>
+
+
+          <NavLink to='/' exact={true} activeClassName='active' className='navLink'>
             Home
           </NavLink>
-        </li>
-        <li>
-          <NavLink to='/login' exact={true} activeClassName='active'>
+
+
+          <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
             Login
           </NavLink>
-        </li>
-        <li>
-          <NavLink to='/sign-up' exact={true} activeClassName='active'>
+
+
+          <NavLink to='/sign-up' exact={true} activeClassName='active' className='navLink'>
             Sign Up
           </NavLink>
-        </li>
-        <li>
-          <NavLink to='/users' exact={true} activeClassName='active'>
-            Users
-          </NavLink>
-        </li>
-        <li>
+
+
+
+
+
           <LogoutButton />
-        </li>
-      </ul>
+
+
     </nav>
   );
 }

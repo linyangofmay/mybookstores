@@ -1,5 +1,21 @@
 .nav_container{
   height:100px;
+  width:100%;
   border: solid 1px red;
+  display:flex;
+  flex-direction:row;
+
+  justify-content:space-between;
+  /* z-index:10; */
+  text-decoration: none;
+  /* background: linear-gradient(90deg,rgba(76, 148, 230, 0.2),#707eea1a 50%); */
+  color:black;
+  font-weight:700;
+
+}
+.navLink{
+  text-decoration:none;
+  color:black;
+  font-weight:700;
 
 }

@@ -54,7 +54,7 @@ function LoggedoutBookstoreList() {
         </div>
 
         <div className='homepage_title_container'>
-          <div className='homepage_title'>Recent Activity </div>
+          <div className='homepage_title'>Your Next Bookstore </div>
         </div>
 
         <div className='recently_activities_container'>
