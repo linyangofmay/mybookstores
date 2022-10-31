@@ -969,7 +969,7 @@ def seed_bookstores():
     )
     bookstore50 = Bookstore(
         ownerId = 1,
-         name= "El Ateneo Grand Splendid",
+        name= "El Ateneo Grand Splendid",
         website = 'http://www.citylights.com/',
         price= '$$',
         description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',

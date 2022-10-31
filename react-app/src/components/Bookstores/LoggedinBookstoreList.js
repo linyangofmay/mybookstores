@@ -68,7 +68,7 @@ function LoggedinBookstoreList() {
 
                 <div className='recent_activity_user_container'>
 
-                  <div className='ra_user_profile'><i className="fas fa-user-circle fa-lg" /> User Prof </div>
+                  <div className='ra_user_profile'><i className="fas fa-user-circle fa-2x" /> </div>
 
                   <div className='recenty_activity_user_name_container'>
                     <div className='ra_user_name'>{review?.firstName}&nbsp; {review?.lastName.slice(0, 1)}. </div>
@@ -79,7 +79,7 @@ function LoggedinBookstoreList() {
                 </div>
 
 
-                <i className="fas fa-user-circle fa-2x" />
+
 
                 <img className='recent_activity_image'
                   src={allbookstores[review.bookstoreId - 1]?.images[0]?.url}
@@ -93,7 +93,13 @@ function LoggedinBookstoreList() {
                   </NavLink>
                 </div>
 
-                <div className='ra_reviewstars'>📙 </div>
+                <div className='ra_reviewstars'>
+                <i class="fas fa-solid fa-star fa-2xl "></i>
+                </div>
+                {/* <i className="fas fa-solid fa-star fa-2xl style:{{color:red}}"></i>  */}
+
+
+
                 <div style = {{fontweight:"700"}} className='ra_review' >
                   {review?.review.slice(0,83) + '...'}
                 </div>

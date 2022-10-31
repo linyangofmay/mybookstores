@@ -10,7 +10,7 @@ import ProfileButton from './ProfileButton';
 
 
 
-function NavBar () {
+function NavBar ({isLoaded}) {
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
   const [showMenu, setShowMenu] = useState(false);
@@ -26,26 +26,26 @@ function NavBar () {
       history.push('/')
     };
    }
-   
+
   let sessionLinks;
-  if (!sessionUser){
-    sessionLinks =(
-     <div className='login-signup-container'>
+  if (sessionUser) {
+    sessionLinks = (
+      <div className='profile_button_div'>
+        <ProfileButton user={sessionUser} />
 
-      <div className='nav-login'>
-        <LoginForm />
       </div>
-
-      <div className='nav-signup'>
-        <SignUpForm />
-      </div>
-
-     </div>
-    )
+    );
   } else {
     sessionLinks =(
-      <ProfileButton />
-    )
+      <>
+        <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
+            Login
+        </NavLink>
+        <NavLink to='/sign-up' exact={true} activeClassName='active' className='navLink'>
+            Sign Up
+        </NavLink>
+      </>
+    );
   }
 
   return (
@@ -60,17 +60,14 @@ function NavBar () {
           <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
             Login
           </NavLink>
-
-
           <NavLink to='/sign-up' exact={true} activeClassName='active' className='navLink'>
             Sign Up
           </NavLink>
-
-
-
-
-
           <LogoutButton />
+          {/* <div className="profile_button_div">
+
+          {isLoaded && sessionLinks}
+        </div> */}
 
 
     </nav>

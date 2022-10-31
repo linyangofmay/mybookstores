@@ -20,7 +20,7 @@
   width: 100%;
   border:solid 1px #ebebeb;
   height: 700px;
-  top: -120px;
+  /* top: -120px; */
   box-sizing:border-box;
 
   z-index:-1;
@@ -150,6 +150,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-left:15px;
+  padding-right:15px;
   padding-top:5px;
   font-size: 16;
   /* width:330px;
@@ -161,5 +162,7 @@
 }
 
 .ra_reviewstars{
-  padding-left:15px;
+  padding-left:10px;
+  margin-bottom:10px;
+  color:gold;
 }

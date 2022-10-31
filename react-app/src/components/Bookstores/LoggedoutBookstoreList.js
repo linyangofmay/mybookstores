@@ -69,7 +69,7 @@ function LoggedoutBookstoreList() {
 
                   <div className='recent_activity_user_container'>
 
-                    <div className='ra_user_profile'><i className="fas fa-user-circle fa-lg" /> User Prof </div>
+                    <div className='ra_user_profile'><i className="fas fa-user-circle fa-2x" /> </div>
 
                     <div className='recenty_activity_user_name_container'>
                       <div className='ra_user_name'>{bookstore?.reviews[0]?.firstName}&nbsp; {bookstore?.reviews[0]?.lastName.slice(0, 1)}. </div>
@@ -80,7 +80,7 @@ function LoggedoutBookstoreList() {
                   </div>
 
 
-                  <i className="fas fa-user-circle fa-2x" />
+
 
                   <img className='recent_activity_image'
                     src={bookstore?.images[0]?.url}

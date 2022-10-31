@@ -10,6 +10,7 @@ import User from './components/User';
 import { authenticate } from './store/session';
 
 import HomePage from './components/Bookstores/HomePage';
+import BookstoreDetail from './components/Bookstores/BookstoreDetail';
 
 
 
@@ -51,7 +52,10 @@ function App() {
            <HomePage />
         </Route>
 
-
+        <Route path='/bookstores/:id' exact={true} >
+           <NavBar />
+           <BookstoreDetail />
+        </Route>
 
       </Switch>
     </BrowserRouter>

@@ -33,7 +33,7 @@
 
 
 .login_form_error{
-
+  width:270px;
   top:10px;
   font-weight:450;
   color:#d32323;
@@ -47,7 +47,7 @@
   width: max-content;
   /* color: #FF385C; */
   margin-bottom: 20px;
-
+  word-wrap: break-word;
   font-family: sans-serif;
 }
 
