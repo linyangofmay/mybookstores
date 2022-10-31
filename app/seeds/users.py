@@ -4,25 +4,25 @@ from app.models import db, User
 # Adds a demo user, you can add other users here if you want
 def seed_users():
     demo = User(
-        username='Demo', email='demo@aa.io', firstName='Demo', lastName='Demo-User', password='password')
+        email='demo@aa.io', firstName='Demo', lastName='Demo-User', password='password')
     marnie = User(
-        username='marniebalcom', email='marnie@aa.io', firstName='Marnie', lastName='Balcom', password='password')
+         email='marnie@aa.io', firstName='Marnie', lastName='Balcom', password='password')
     bobbie = User(
-        username='bobbiejack', email='bobbie@aa.io', firstName='Bobbie', lastName='Fuselier', password='password')
+        email='bobbie@aa.io', firstName='Bobbie', lastName='Fuselier', password='password')
     jimgreen = User(
-        username='jimgreen', email='jimgreen@aa.io', firstName="Jim", lastName='Green',password='password')
+        email='jimgreen@aa.io', firstName="Jim", lastName='Green',password='password')
     meimeihan = User(
-        username='meimeihan', email='meimeihan@aa.io', firstName="Meimeihan", lastName='Palmer',password='password')
+        email='meimeihan@aa.io', firstName="Meimeihan", lastName='Palmer',password='password')
     vera = User(
-        username='vera', email='vera@aa.io', firstName="Vera", lastName="Kline", password='password')
+        email='vera@aa.io', firstName="Vera", lastName="Kline", password='password')
     brant = User(
-        username='brant', email='brant@aa.io', firstName="Brant", lastName='Soukup', password='password')
+        email='brant@aa.io', firstName="Brant", lastName='Soukup', password='password')
     jeffie = User(
-        username='jieffie', email='jeffie@aa.io', firstName="Jeffie", lastName='Parnell', password='password')
+         email='jeffie@aa.io', firstName="Jeffie", lastName='Parnell', password='password')
     carmen = User(
-        username='carmen', email='carmen@aa.io',firstName="Carmen", lastName='Caylor', password='password')
+         email='carmen@aa.io',firstName="Carmen", lastName='Caylor', password='password')
     theressa = User(
-        username='theressa', email='theressa@aa.io', firstName="Theressa", lastName='Hoaglin', password='password')
+         email='theressa@aa.io', firstName="Theressa", lastName='Hoaglin', password='password')
 
 
 

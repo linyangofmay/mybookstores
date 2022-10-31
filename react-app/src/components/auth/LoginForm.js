@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import { login } from '../../store/session';
-import { Modal } from '../../context/Modal';
+
 import './LoginForm.css'
 
 const LoginForm = () => {
@@ -49,6 +49,7 @@ const LoginForm = () => {
               <div key={ind}>{error}</div>
             ))}
           </div>
+
           <div>
             <div className='logintoibook'>Log in to iBook</div>
             <div className='newtoibook'>New to iBook ? &nbsp;
