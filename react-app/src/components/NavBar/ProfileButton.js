@@ -39,7 +39,7 @@ function ProfileButton({ user }) {
 
             <Link  className="menu-item-link" to={`/bookstores/mybookstores`}><i className="fa-regular fa-rectangle-list fa-lg"></i> &nbsp;My Bookstore Listings</Link>
 
-            <NavLink className='menu-item-link' to={'bookstores/mybookstores/new'}><i className="fa-solid fa-store fa-lg"></i> &nbsp;List a Bookstore</NavLink>
+            <Link className='menu-item-link' to={'/bookstores/new'}><i className="fa-solid fa-store fa-lg"></i> &nbsp;List a Bookstore</Link>
 
             <Link className="menu-item-link" to={`/myreviews`}><i className="fa-regular fa-star fa-lg"></i> &nbsp;My reviews</Link>
 
