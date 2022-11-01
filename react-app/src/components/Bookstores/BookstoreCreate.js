@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { createBookstore } from '../../store/bookstore'
+import './BookstoreCreate.css'
 
 
 function BookstoreCreate() {
 
   const dispatch = useDispatch()
-  const hisotry = useHistory()
+  const history = useHistory()
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [website, setWebsite] = useState('')
@@ -66,9 +67,10 @@ function BookstoreCreate() {
   return (
 
     <div className="create_product_main">
+      <div>hello</div>
       <div className="create_product_div">
         <h1>List a Bookstore</h1>
-        <form className="create_product_form" onSubmit={onSubmit}>
+        <form className="create_product_form" onSubmit={createBookstore}>
           <div className='login_form_error'>
             {errors.map((error, ind) => (
               <div key={ind}>{error}</div>
@@ -109,33 +111,41 @@ function BookstoreCreate() {
               ></textarea>
             </div>
           </div>
+
+
           <div className="create_product_input">
             <div className="create_product_text_box">
               <div>Price</div>
-              <div className="create_product_small_text">
-                Remember to factor in labor, cost of material, etc. Shipping
-                is free to all customers.
-              </div>
-            </div>
+             </div>
+
             <div>
-              <input
-                type="number"
-                name="price"
-                value={price}
-                className="create_product_input_inner"
-                onChange={(event) => setPrice(event.target.value)}
-                min="1"
-                max="1000000"
-              ></input>
-            </div>
+
+               <select
+                 required
+                 name="price"
+                 value={price}
+                 onChange={(event) => setPrice(event.target.value)}
+                 className="create_product_input_inner"
+               >
+                 <option value="" disabled>
+                   Select a price
+                 </option>
+                 {priceArr.map((price) => (
+                   <option key={price} value={price}>
+                     {price}
+                   </option>
+                 ))}
+               </select>
+             </div>
           </div>
+
+
+
+
           <div className="create_product_input">
             <div className="create_product_text_box">
               <div>Category</div>
-              <div className="create_product_small_text">
-                Type a two word description to get category suggestions that
-                will help buyers find when they want.
-              </div>
+
             </div>
             <div>
 
@@ -157,6 +167,8 @@ function BookstoreCreate() {
               </select>
             </div>
           </div>
+
+
           <div className="create_product_input">
             <div className="create_product_text_box">
               <div>BusinessHours</div>
@@ -182,7 +194,7 @@ function BookstoreCreate() {
 
             </div>
           </div>
-          <div className="create_product_input">
+          {/* <div className="create_product_input">
             <div className="create_product_text_box">
               <div>Image</div>
               <div className="create_product_small_text">
@@ -199,7 +211,7 @@ function BookstoreCreate() {
                 required
               ></input>
             </div>
-          </div>
+          </div> */}
 
           <div className="create_product_footer">
             <div className="create_product_footer2">
