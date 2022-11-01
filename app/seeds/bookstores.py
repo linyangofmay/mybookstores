@@ -336,675 +336,675 @@ def seed_bookstores():
         createdAt= now,
         updatedAt= now
     )
-    bookstore18 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore19 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore20 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore21 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore22 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore23 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore24 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore25 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore26 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore27 = Bookstore(
-         ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore28 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "lounge",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore29 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore30 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore31 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore32 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-     )
-    bookstore33 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore34 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore35 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "CD & Video",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore36 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore37 = Bookstore(
-       ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore38 = Bookstore(
-       ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore39 = Bookstore(
-       ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore40 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        # highlight = "Handmade",
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore41 = Bookstore(
-        ownerId = 2,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "multiple stories",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore42 = Bookstore(
-        ownerId = 6,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore43 = Bookstore(
-        ownerId = 7,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore44 = Bookstore(
-        ownerId = 7,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore45 = Bookstore(
-        ownerId = 7,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore46 = Bookstore(
-        ownerId = 7,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore47 = Bookstore(
-        ownerId = 1,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore48 = Bookstore(
-        ownerId = 1,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore49 = Bookstore(
-        ownerId = 1,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore50 = Bookstore(
-        ownerId = 1,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
-    bookstore51 = Bookstore(
-        ownerId = 7,
-        name= "El Ateneo Grand Splendid",
-        website = 'http://www.citylights.com/',
-        price= '$$',
-        description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
-        category= "restroom",
-        businessHours='11:30 AM - 11:00 PM',
-        phone = '4153628193',
-        address ='261 Columbus Ave',
-        city = 'San Francisco',
-        state = 'CA',
-        country ='USA',
-        zipcode ='94133',
-        latitude ='37.79769',
-        longitude = '-122.40660',
-        createdAt= now,
-        updatedAt= now
-    )
+    # bookstore18 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "kids",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore19 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "kids",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore20 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "kids",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore21 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "kids",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore22 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "kids",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore23 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore24 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore25 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore26 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore27 = Bookstore(
+    #      ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore28 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "lounge",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore29 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore30 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore31 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore32 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    #  )
+    # bookstore33 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore34 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore35 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "CD & Video",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore36 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore37 = Bookstore(
+    #    ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore38 = Bookstore(
+    #    ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore39 = Bookstore(
+    #    ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore40 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     # highlight = "Handmade",
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore41 = Bookstore(
+    #     ownerId = 2,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "multiple stories",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore42 = Bookstore(
+    #     ownerId = 6,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore43 = Bookstore(
+    #     ownerId = 7,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore44 = Bookstore(
+    #     ownerId = 7,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore45 = Bookstore(
+    #     ownerId = 7,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore46 = Bookstore(
+    #     ownerId = 7,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore47 = Bookstore(
+    #     ownerId = 1,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore48 = Bookstore(
+    #     ownerId = 1,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore49 = Bookstore(
+    #     ownerId = 1,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore50 = Bookstore(
+    #     ownerId = 1,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
+    # bookstore51 = Bookstore(
+    #     ownerId = 7,
+    #     name= "El Ateneo Grand Splendid",
+    #     website = 'http://www.citylights.com/',
+    #     price= '$$',
+    #     description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
+    #     category= "restroom",
+    #     businessHours='11:30 AM - 11:00 PM',
+    #     phone = '4153628193',
+    #     address ='261 Columbus Ave',
+    #     city = 'San Francisco',
+    #     state = 'CA',
+    #     country ='USA',
+    #     zipcode ='94133',
+    #     latitude ='37.79769',
+    #     longitude = '-122.40660',
+    #     createdAt= now,
+    #     updatedAt= now
+    # )
 
     db.session.add(bookstore01)
     db.session.add(bookstore02)
@@ -1023,40 +1023,40 @@ def seed_bookstores():
     db.session.add(bookstore15)
     db.session.add(bookstore16)
     db.session.add(bookstore17)
-    db.session.add(bookstore18)
-    db.session.add(bookstore19)
-    db.session.add(bookstore20)
-    db.session.add(bookstore21)
-    db.session.add(bookstore22)
-    db.session.add(bookstore23)
-    db.session.add(bookstore24)
-    db.session.add(bookstore25)
-    db.session.add(bookstore26)
-    db.session.add(bookstore27)
-    db.session.add(bookstore28)
-    db.session.add(bookstore29)
-    db.session.add(bookstore30)
-    db.session.add(bookstore31)
-    db.session.add(bookstore32)
-    db.session.add(bookstore33)
-    db.session.add(bookstore34)
-    db.session.add(bookstore35)
-    db.session.add(bookstore36)
-    db.session.add(bookstore37)
-    db.session.add(bookstore38)
-    db.session.add(bookstore39)
-    db.session.add(bookstore40)
-    db.session.add(bookstore41)
-    db.session.add(bookstore42)
-    db.session.add(bookstore43)
-    db.session.add(bookstore44)
-    db.session.add(bookstore45)
-    db.session.add(bookstore46)
-    db.session.add(bookstore47)
-    db.session.add(bookstore48)
-    db.session.add(bookstore49)
-    db.session.add(bookstore50)
-    db.session.add(bookstore51)
+    # db.session.add(bookstore18)
+    # db.session.add(bookstore19)
+    # db.session.add(bookstore20)
+    # db.session.add(bookstore21)
+    # db.session.add(bookstore22)
+    # db.session.add(bookstore23)
+    # db.session.add(bookstore24)
+    # db.session.add(bookstore25)
+    # db.session.add(bookstore26)
+    # db.session.add(bookstore27)
+    # db.session.add(bookstore28)
+    # db.session.add(bookstore29)
+    # db.session.add(bookstore30)
+    # db.session.add(bookstore31)
+    # db.session.add(bookstore32)
+    # db.session.add(bookstore33)
+    # db.session.add(bookstore34)
+    # db.session.add(bookstore35)
+    # db.session.add(bookstore36)
+    # db.session.add(bookstore37)
+    # db.session.add(bookstore38)
+    # db.session.add(bookstore39)
+    # db.session.add(bookstore40)
+    # db.session.add(bookstore41)
+    # db.session.add(bookstore42)
+    # db.session.add(bookstore43)
+    # db.session.add(bookstore44)
+    # db.session.add(bookstore45)
+    # db.session.add(bookstore46)
+    # db.session.add(bookstore47)
+    # db.session.add(bookstore48)
+    # db.session.add(bookstore49)
+    # db.session.add(bookstore50)
+    # db.session.add(bookstore51)
 
     db.session.commit()
 

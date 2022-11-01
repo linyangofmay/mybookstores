@@ -164,5 +164,41 @@
 .ra_reviewstars{
   padding-left:10px;
   margin-bottom:10px;
-  color:gold;
+
+  display:flex;
+  flex-direction:row;
+}
+.fivestars{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:red;
+}
+.fourtars{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:orangered;
+}
+
+.threestars{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:orange;
+}
+
+.twostars{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:darkgoldenrod
+}
+
+.onestar{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:rgb(195, 188, 46)
+}
+
+.zerostar{
+  padding-right:10px;
+  margin-bottom:10px;
+  color:white;
 }

@@ -33,7 +33,8 @@ function LoggedoutBookstoreList() {
 
   const user = useSelector((state) => state.session)
 
-  const reviewvalue = Math.round(bookstore?.avgstars)
+  // const reviewvalue = Math.round(bookstore?.avgstars)
+  // console.log('reviewvalue------', reviewvalue);
 
   const nouserreturn =
 
@@ -94,7 +95,74 @@ function LoggedoutBookstoreList() {
                     </NavLink>
                   </div>
 
-                  <div className='ra_reviewstars'>📙 </div>
+                  <div className='ra_reviewstars'>
+                  {Math.round(bookstore.avgstars) === 5 && (
+                     <div className='fivestars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                   {Math.round(bookstore.avgstars) === 4 && (
+
+                     <div className='fourstars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+                   )}
+
+                    {Math.round(bookstore.avgstars) === 3 && (
+                     <div className='threestars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                   {Math.round(bookstore.avgstars) === 2 && (
+                     <div className='twostars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                    {Math.round(bookstore.avgstars) === 1 && (
+                     <div className='onestar'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                  {Math.round(bookstore.avgstars) === 0 && (
+                     <div className='zerostar'>
+                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                </div>
                   <div style = {{fontweight:"700"}} className='ra_review' >
                     {bookstore?.reviews[0]?.review.slice(0,83) + '...'}
                   </div>

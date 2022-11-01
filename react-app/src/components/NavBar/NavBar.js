@@ -57,17 +57,17 @@ function NavBar ({isLoaded}) {
           </NavLink>
 
 
-          <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
+          {/* <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
             Login
           </NavLink>
           <NavLink to='/sign-up' exact={true} activeClassName='active' className='navLink'>
             Sign Up
           </NavLink>
-          <LogoutButton />
-          {/* <div className="profile_button_div">
+          <LogoutButton /> */}
+          <div className="profile_button_div">
 
           {isLoaded && sessionLinks}
-        </div> */}
+        </div>
 
 
     </nav>

@@ -6,8 +6,7 @@ import  { thunkGetOneBookstore } from "../../store/bookstore";
 import './BookstoreDetail.css'
 import { thunkGetAllBookstoreReview } from "../../store/review";
 // import ReviewCreateModal from "../Reviews/ReviewCreateModal";
-// import { Rating } from 'react-simple-star-rating'
-// import { FaStar } from 'react-icons/fa'
+
 import { thunkGetAllBookstore } from "../../store/bookstore";
 import {Modal} from '../../context/Modal';
 
@@ -18,11 +17,13 @@ function BookstoreDetail(){
   const bookstore = useSelector((state)=> state.bookstore[id]);
   console.log('bookstore-----', bookstore)
   const user = useSelector((state) => state.session.user);
-  const review = useSelector((state)=> state.review);
-  const reviewArray = Object.values(review);
-  const reviewCount = reviewArray.length;
+  // const review = useSelector((state)=> state.review);
+ const reviewArr = bookstore?.reviews
+  console.log('reviewArr-----', reviewArr);
+  const reviewCount = reviewArr?.length;
+  console.log('reviewArrlength-----', reviewArr?.length);
   const imageArr = bookstore?.images
-  console.log('imageArr------', imageArr)
+
 
   useEffect(() =>{
     dispatch(thunkGetOneBookstore(id));
@@ -44,12 +45,20 @@ function BookstoreDetail(){
          ))}
         </div>
 
-        {/* <div className ='see_all_images'>
-          <NavLink to={`/`}
 
-        </div> */}
+
+          <div>
+           {reviewArr && reviewArr?.map((review, idx)=>(
+              <div key ={idx}>
+
+                   {review.review}
+              </div>
+         ))}
+        </div>
+
+
       </>
-  )
+     )
 
 
 

@@ -30,7 +30,7 @@ def bookstore(id):
 @login_required
 def currentuser_bookstore():
     currentuserid = current_user.id
-    bookstores = Bookstore.query.filter(Bookstore.userId == currentuserid)
+    bookstores = Bookstore.query.filter(Bookstore.ownerId == currentuserid)
     return {'bookstores' : [bookstore.to_dict() for bookstore in bookstores]}
 
 #create a bookstore
@@ -76,7 +76,7 @@ def update_bookstore(id):
 
     if edit_bookstore is None:
         return {"errors" : "Bookstore couldn't be found"}, 404
-    if edit_bookstore.userId != current_user.id:
+    if edit_bookstore.ownerId != current_user.id:
         return {"errors" : "You don't have the right to edit the bookstore"}, 403
 
     if form.validate_on_submit():
@@ -108,7 +108,7 @@ def delete_bookstore(id):
 
     delete_bookstore = Bookstore.query.get(id)
 
-    if delete_bookstore.userId != current_user.id:
+    if delete_bookstore.ownerId != current_user.id:
         return {"errors" : "You don't have the right to delete this bookstore"}, 403
 
     db.session.delete(delete_bookstore)

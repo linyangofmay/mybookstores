@@ -24,7 +24,19 @@ function LoggedinBookstoreList() {
 
   const review = useSelector((state) => state.review)
   const reviewArr = Object.values(review)
-  console.log('reviewArr------', reviewArr);
+  const reviewCount = reviewArr?.length;
+  const avgStar = reviewArr?.map((review) => review.stars);
+  let sum = 0;
+  avgStar.forEach((review) => {
+  sum += review;
+  });
+
+const realAvgStar = Math.round(sum / reviewCount);
+  // console.log('reviewArr------', reviewArr);
+ console.log('realAvgStar------', realAvgStar)
+
+
+
 
 
   console.log('allbookstores---------', allbookstores);
@@ -32,9 +44,9 @@ function LoggedinBookstoreList() {
 
   const user = useSelector((state) => state.session)
 
-  const reviewvalue = Math.round(bookstore?.avgstars)
 
-  const nouserreturn =
+
+
 
     useEffect(() => {
       dispatch(thunkGetAllBookstore())
@@ -94,7 +106,68 @@ function LoggedinBookstoreList() {
                 </div>
 
                 <div className='ra_reviewstars'>
-                <i class="fas fa-solid fa-star fa-2xl "></i>
+                  {realAvgStar === 5 && (
+                     <div className='fivestars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+                   {realAvgStar === 4 && (
+                     <div className='fourstars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+
+                    </div>
+                   )}
+
+                    {realAvgStar === 3 && (
+                     <div className='threestars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+
+                    </div>
+
+                  )}
+
+                   {realAvgStar === 2 && (
+                     <div className='twostars'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+
+                    </div>
+
+                  )}
+
+                    {realAvgStar === 1 && (
+                     <div className='onestar'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+
+                    </div>
+
+                  )}
+
+                  {realAvgStar === 0 && (
+                     <div className='zerostar'>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                    </div>
+
+                  )}
+
+
+
+
                 </div>
                 {/* <i className="fas fa-solid fa-star fa-2xl style:{{color:red}}"></i>  */}
 

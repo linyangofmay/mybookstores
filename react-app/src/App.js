@@ -11,22 +11,23 @@ import { authenticate } from './store/session';
 
 import HomePage from './components/Bookstores/HomePage';
 import BookstoreDetail from './components/Bookstores/BookstoreDetail';
-
-
+import MyBookstore from './components/Bookstores/MyBookstore';
+import BookstoreUpdate from './components/Bookstores/BookstoreUpdate';
+import BookstoreCreate from './components/Bookstores/BookstoreCreate';
 
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
-      setLoaded(true);
+      setIsLoaded(true);
     })();
   }, [dispatch]);
 
-  if (!loaded) {
+  if (!isLoaded) {
     return null;
   }
 
@@ -48,14 +49,35 @@ function App() {
         </ProtectedRoute> */}
 
         <Route path='/' exact={true} >
-           <NavBar />
+           <NavBar isLoaded={isLoaded}/>
            <HomePage />
         </Route>
 
+        <Route path='/bookstores/mybookstores' exact={true}>
+          <NavBar isLoaded={isLoaded}/>
+          <MyBookstore />
+        </Route>
+
+        <Route path='/bookstores/mybookstores/new' exact={true}>
+          <BookstoreCreate />
+        </Route>
+
+
+
         <Route path='/bookstores/:id' exact={true} >
-           <NavBar />
+           <NavBar isLoaded={isLoaded}/>
            <BookstoreDetail />
         </Route>
+
+        <Route path='/bookstores/:id/edit' exact={true} >
+           <NavBar isLoaded={isLoaded}/>
+           <BookstoreUpdate />
+        </Route>
+
+
+
+
+
 
       </Switch>
     </BrowserRouter>
