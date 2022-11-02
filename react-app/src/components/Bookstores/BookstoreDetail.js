@@ -95,7 +95,7 @@ function BookstoreDetail() {
 
 
                {!user ||
-                    bookstore?.userId === user?.id ||
+                    bookstore?.ownerId === user?.id ||
                     filteredreview.length ? (
                     <div></div>
                ) : (
