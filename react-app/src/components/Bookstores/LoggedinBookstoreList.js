@@ -95,6 +95,7 @@ const realAvgStar = Math.round(sum / reviewCount);
 
                 <img className='recent_activity_image'
                   src={allbookstores[review.bookstoreId - 1]?.images[0]?.url}
+
                   alt="bookstore"
 
                 />

@@ -84,7 +84,8 @@ function LoggedoutBookstoreList() {
 
 
                   <img className='recent_activity_image'
-                    src={bookstore?.images[0]?.url}
+                    // src={bookstore?.images[0]?.url}
+                    src={bookstore?.previewImage}
                     alt="bookstore"
 
                   />

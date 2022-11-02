@@ -3,6 +3,7 @@ from .users import seed_users, undo_users
 from .bookstores import seed_bookstores, undo_bookstores
 from .reviews import seed_reviews, undo_reviews
 from .images import seed_images, undo_images
+from ..models import db
 
 
 
@@ -31,3 +32,7 @@ def undo():
     undo_images()
 
     # Add other undo functions here
+@seed_commands.command('restore')
+def restore():
+    db.drop_all()
+    db.create_all()

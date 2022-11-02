@@ -72,9 +72,10 @@ Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "mult
 
 
 class BookstoreForm(FlaskForm):
+
     name = StringField("name", validators= [DataRequired(), name_validation])
     description = TextAreaField("description", validators= [DataRequired(), description_validation])
-    price = IntegerField("Price", validators=[DataRequired()])
+    price = StringField("price", validators=[DataRequired()])
     category = SelectField("category",choices = Categories_Choices, validators=[DataRequired()])
     phone = StringField("phone", validators=[DataRequired(), valid_phone])
     website = StringField('website', validators=[DataRequired(), valid_website])
@@ -82,7 +83,8 @@ class BookstoreForm(FlaskForm):
     city = StringField('city', validators=[DataRequired(), valid_city])
     state = StringField('state', validators=[DataRequired(), valid_state])
     country = StringField('country', validators=[DataRequired()])
+    zipcode = StringField('zipcode', validators=[DataRequired()])
     latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])
-    longitude = IntegerField('longitude', validators=[DataRequired(), valid_longitude])
+    longtitude = IntegerField('longtitude', validators=[DataRequired(), valid_longitude])
     businessHours = StringField('businessHours', validators=[DataRequired()])
-    previewImage = StringField("Image URL", validators= [DataRequired()])
+    previewImage = StringField("previewImage", validators= [DataRequired()])

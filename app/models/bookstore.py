@@ -23,6 +23,7 @@ class Bookstore(db.Model):
     zipcode = db.Column(db.String(50), nullable=False)
     latitude = db.Column(db.Float(20), nullable=False)
     longitude = db.Column(db.Float(20), nullable=False)
+    previewImage = db.Column(db.String(500), nullable=False)
     createdAt = db.Column(db.DateTime, nullable=False)
     updatedAt = db.Column(db.DateTime, nullable=False)
 
@@ -56,12 +57,11 @@ class Bookstore(db.Model):
             'country':self.country,
             'zipcode':self.zipcode,
             'latitude':self.latitude,
-            'longtitude':self.longitude,
+            'longitude':self.longitude,
+            'previewImage': self.previewImage,
             'createdAt':self.createdAt,
             'updatedAt':self.updatedAt,
             'reviews': [review.to_dict() for review in self.reviews],
             'avgstars': self.get_avgstars(),
-            'images': [image.to_dict() for image in self.images]
+            # 'images': [image.to_dict() for image in self.images]
         }
-
-        

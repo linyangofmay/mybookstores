@@ -100,6 +100,8 @@ export const thunkCreateBookstore = (bookstore) => async dispatch => {
       dispatch(actionCreateBookstore(data))
       return data
   }
+  const data = res.json()
+  console.log('data========', data.errors)
 }
 
 export const thunkUpdateBookstore = (bookstore) => async dispatch => {
@@ -141,7 +143,7 @@ const bookstoreReducer = (state = initialState, action) => {
     case createBookstore:
       newState[action.bookstore.id] = action.bookstore;
       return newState;
-      
+
     case getAllBookstore:
       newState = {};
       //console.log('action.bookstores.bookstores--------', action.bookstores)

@@ -63,11 +63,13 @@ function BookstoreCreate() {
     if ((phone.length !== 10 || !phone.match(phoneregx))) {
       errors.push("business phone: must be 10 sequential numbers ( 1234567890 ).")
     }
-
-    if((!previewImage.split('?')[0].match(imageregx) ))
+     console.log('price========', price)
+    // if((!previewImage.split('?')[0].match(imageregx) ) ){
+    //   errors.push("image must be jpg, jpeg, png svg et al types")
+    // }
 
     setErrors(errors);
-  }, [name, address, city, state, country, zipcode, website, phone])
+  }, [name, address, city, state, country, zipcode, website, phone, price])
 
   const createBookstore = async (e) => {
     e.preventDefault();
@@ -75,7 +77,7 @@ function BookstoreCreate() {
     if (errors.length) return
 
     const newBookstore = {
-      ownerId: user.id,
+
       name,
       description,
       price,
@@ -90,9 +92,8 @@ function BookstoreCreate() {
       zipcode,
       latitude,
       longtitude,
-      // url1:url1,
-      // url2:url2,
-      // url3:url3,
+      previewImage
+
     };
 
     const res = await dispatch(thunkCreateBookstore(newBookstore))

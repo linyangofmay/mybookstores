@@ -34,14 +34,19 @@ def currentuser_bookstore():
     return {'bookstores' : [bookstore.to_dict() for bookstore in bookstores]}
 
 #create a bookstore
-@bookstore_routes.route('/new', methods=['GET','POST'])
+@bookstore_routes.route('/new', methods=['POST'])
 @login_required
 def add_bookstore():
+    print('hello world-----------========', current_user.id,  )
+
     form = BookstoreForm()
     form['csrf_token'].data = request.cookies['csrf_token']
+    print('form.data==========', form.data)
     if form.validate_on_submit():
+        print('name-======', form.data['name'])
+
         new_bookstore = Bookstore(
-            userId = current_user.id,
+            ownerId = current_user.id,
             name = form.data['name'],
             description = form.data['description'],
             price = form.data['price'],
@@ -55,8 +60,8 @@ def add_bookstore():
             country = form.data['country'],
             zipcode = form.data['zipcode'],
             latitude = form.data['latitude'],
-            longitude = form.data['longitude'],
-            previewImage = form.date['previewImage'],
+            longitude = form.data['longtitude'],
+            previewImage = form.data['previewImage'],
 
             createdAt = now,
             updatedAt = now
