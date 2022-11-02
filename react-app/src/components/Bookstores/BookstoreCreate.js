@@ -391,8 +391,7 @@ function BookstoreCreate() {
 
           <div className='create_bookstore_image_container'>
             <ImageCreate />
-            <ImageCreate />
-            <ImageCreate />
+           
           </div>
 
 

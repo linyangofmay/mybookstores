@@ -90,7 +90,8 @@ function BookstoreDetail() {
                </div>
 
 
-
+               <br></br>
+               <br></br>
 
 
                {!user ||
