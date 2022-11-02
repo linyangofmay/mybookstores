@@ -64,6 +64,7 @@ export const thunkGetAllBookstore = () => async dispatch => {
   }
 }
 
+//get bookstore details by bookstore ID
 export const thunkGetOneBookstore = (id) => async dispatch => {
   const res = await fetch(`/api/bookstores/${id}`, {
     method: "GET",
@@ -87,7 +88,7 @@ export const thunkGetCurrentBookstore = () => async dispatch => {
     dispatch(actionGetCurrentBookstore(data))
   }
 }
-
+//create one
 export const thunkCreateBookstore = (bookstore) => async dispatch => {
   const res = await fetch('/api/bookstores/new', {
       method: 'POST',
