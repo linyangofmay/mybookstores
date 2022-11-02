@@ -80,7 +80,7 @@ function BookstoreDetail() {
                          <div className='bs_banner_img_container'>
                               <img
                                    className='bs_banner_img'
-                                   src={bookstore?.images[0].url}
+                                   src={bookstore?.previewImage}
                                    alt='Bookstore Image'
                               />
 

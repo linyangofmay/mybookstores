@@ -27,7 +27,7 @@ class Review(db.Model):
             'stars': self.stars,
             'bookstoreId':self.bookstoreId,
             # 'reviewImg':self.bookstore.images if self.bookstore else None,
-             'bookstoreImg': [image.to_dict() for image in self.bookstore.images],
+             'bookstoreImg': self.bookstore.previewImage,
             # 'bookstoreImg': self.bookstore.images if self.bookstore else None,
             'bookstorename': self.bookstore.name if self.bookstore else None,
             'bookstorecategory': self.bookstore.category if self.bookstore else None,
