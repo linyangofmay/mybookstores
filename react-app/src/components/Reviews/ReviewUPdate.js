@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { thunkUpdateReview } from '../../store/review'
 
 
-
+ //git cant recognize folder name 
 
 import './ReviewUpdate.css'
 
@@ -51,7 +51,7 @@ function ReviewUpdate({review, setShowModal}) {
         let updatedRevew = await dispatch(thunkUpdateReview(payload))
 
         if (updatedRevew) {
-           
+
             setShowModal(false)
             history.push('/myreviews')
         }
