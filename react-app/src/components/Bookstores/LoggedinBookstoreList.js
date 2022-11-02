@@ -205,3 +205,4 @@ const realAvgStar = Math.round(sum / reviewCount);
 }
 
 export default LoggedinBookstoreList
+//added some note
