@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
 // import ReviewUpdate from "./ReviewUpdate";
-import ReviewU
+import ReviewUpdate from "./ReviewUpdate";
 
 
 function ReviewUpdateModal({review}) {
