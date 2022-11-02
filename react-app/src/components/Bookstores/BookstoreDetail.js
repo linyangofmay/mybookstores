@@ -26,7 +26,13 @@ function BookstoreDetail() {
      console.log('bookstore-----', bookstore)
      const user = useSelector((state) => state.session.user);
      const review = useSelector((state) => state.review);
-     const reviewArr = bookstore?.reviews
+     const reviewArr= Object.values(review);
+
+
+
+
+     const today = new Date();
+
      console.log('reviewArr-----', reviewArr);
      const reviewCount = reviewArr?.length;
      console.log('reviewArrlength-----', reviewArr?.length);
@@ -36,6 +42,8 @@ function BookstoreDetail() {
           (item) => item?.userId === user?.id
      )
      console.log('filteredreview----', filteredreview);
+
+
 
      // useEffect(() => {
      //      dispatch(thunkGetOneBookstore(id));
@@ -96,14 +104,16 @@ function BookstoreDetail() {
                )}
 
                <div>
-                    {reviewArr && reviewArr?.map((review, idx) => (
+                    {reviewCount ? ( reviewArr?.map((review, idx) => (
                          <div key={idx}>
 
                               {review?.review}
                               {review?.firstName}
                          </div>
 
-                    ))}
+                    ))) :(
+                      <div> Would you like to leave a review? </div>
+                    )}
                </div>
 
 
