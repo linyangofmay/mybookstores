@@ -67,7 +67,7 @@ function MyReviews() {
                       <div className="my_review_star_text">{`Your Review`}</div>
                       {review.stars === 1 && (
                         <div>
-                          <FaStar size={20} color="orange" />
+                          <FaStar size={20} color="yellow" />
                           <FaStar size={20} color="lightgrey" />
                           <FaStar size={20} color="lightgrey" />
                           <FaStar size={20} color="lightgrey" />
@@ -76,8 +76,8 @@ function MyReviews() {
                       )}
                       {review.stars === 2 && (
                         <div>
-                          <FaStar size={20} color="yellow" />
-                          <FaStar size={20} color="lightgrey" />
+                          <FaStar size={20} color="gold" />
+                          <FaStar size={20} color="gold" />
                           <FaStar size={20} color="lightgrey" />
                           <FaStar size={20} color="lightgrey" />
                           <FaStar size={20} color="lightgrey" />
