@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { thunkUpdateReview } from '../../store/review'
 
 
- //git cant recognize folder name 
+ //git cant recognize folder name  //tried again 
 
 import './ReviewUpdate.css'
 
