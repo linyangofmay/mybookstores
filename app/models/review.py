@@ -17,16 +17,18 @@ class Review(db.Model):
 
     user = db.relationship('User', back_populates='reviews')
     bookstore = db.relationship('Bookstore', back_populates='reviews')
-
+    # print('bookstore.images---------',bookstore.images )
 
     def to_dict(self):
+        # print('bookstore.images---------',self.bookstore.images )
         return {
             'id': self.id,
             'review': self.review,
             'stars': self.stars,
             'bookstoreId':self.bookstoreId,
-            # 'reviewImg':self.reviewImg,
-            # 'bookstoreImg': self.image if self.image else None,
+            # 'reviewImg':self.bookstore.images if self.bookstore else None,
+             'bookstoreImg': [image.to_dict() for image in self.bookstore.images],
+            # 'bookstoreImg': self.bookstore.images if self.bookstore else None,
             'bookstorename': self.bookstore.name if self.bookstore else None,
             'bookstorecategory': self.bookstore.category if self.bookstore else None,
             'userId':self.userId,

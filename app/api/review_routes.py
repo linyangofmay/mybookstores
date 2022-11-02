@@ -24,7 +24,7 @@ def get_bookstore_reviews(id):
   return {'bookstore_reviews': [review.to_dict() for review in bookstore_reviews]}
 
 #get reviews based on userId
-@review_routes.route('/')
+@review_routes.route('/user_reviews')
 @login_required
 def get_user_reviews():
   user_reviews = Review.query.filter(Review.userId == current_user.id).all()
@@ -32,7 +32,7 @@ def get_user_reviews():
 
 
 #create a review
-@review_routes.route('/bookstores/<int:id>', methods=['POST'])
+@review_routes.route('/bookstores/<int:id>', methods=['GET','POST'])
 @login_required
 def create_review(id):
   form = ReviewForm()
@@ -42,7 +42,7 @@ def create_review(id):
     newreview = Review(
        review = data['review'],
        stars = data['stars'],
-       reviewImg = data['reviewImg'],
+      #  reviewImg = data['reviewImg'],
        bookstoreId = id,
        userId = current_user.id,
        createdAt = now,
@@ -66,7 +66,7 @@ def updat_bookstore_review(reviewId):
       if updatedreview:
          updatedreview.review = form.data['review']
          updatedreview.stars = form.data['stars']
-         updatedreview.reviewImg = form.data['reviewImg']
+        #  updatedreview.reviewImg = form.data['reviewImg']
 
          db.session.commit()
          return updatedreview.to_dict()

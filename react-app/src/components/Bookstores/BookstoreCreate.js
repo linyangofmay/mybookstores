@@ -7,9 +7,11 @@ import './BookstoreCreate.css'
 
 
 function BookstoreCreate() {
-
+  const user = useSelector((state) =>state?.session?.user);
+ console.log('user-----', user);
   const dispatch = useDispatch()
   const history = useHistory()
+  // const [ownerId, setOwnerId] = useState('');
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [website, setWebsite] = useState('')
@@ -27,25 +29,58 @@ function BookstoreCreate() {
   // const [url1, setUrl1] = useState('')
   // const [url2, setUrl2] = useState('')
   // const [url3, setUrl3] = useState('')
-  const [images, setImages] = useState([])
-
-
-
+  // const [images, setImages] = useState([])
+  const [errors, setErrors] = useState([])
+  const [submitted, setSubmitted] = useState(false);
   const priceArr = ['$', '$$', '$$$', '$$$$']
   const businessHoursArr = [['11:00AM', '7:00PM'], ['10:00AM', '9:00PM'], ['12:00PM', '10:00PM']]
   const categoryArr = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
+  const zipregx = /^\d{5}$/
+  const phoneregx = /^\d{10}$/
+  const webregx= /^(http(s)?:\/\/)[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+  useEffect(() =>{
+    let errors=[];
+    if(name.length<2 || name.length>20){
+      errors.push('name must be between 2 and 20 letters')
+    }
+    if(address.length<2 || name.length>20){
+      errors.push('address must be between 2 and 20 letters')
+    }
+    if(city.length<2 || name.length>10){
+      errors.push('city must be between 2 and 10 letters')
+    }
+    if(state.length<2 || name.length>10){
+      errors.push('name must be between 2 and 10 letters')
+    }
+    if(country.length<2 || name.length>10){
+      errors.push('country must be between 2 and 10 letters')
+    }
+    if ((!zipcode.match(zipregx))){
+      errors.push("zipcode: must be 5 numbers.")
+    }
+    if (website.length < 2 || !website.match(webregx)) {
+      errors.push("business website: must be a valid url ( https://example.ex ).");
+    }
+    if ((phone.length !== 10 || !phone.match(phoneregx))) {
+      errors.push("business phone: must be 10 sequential numbers ( 1234567890 ).")
+    }
 
-  const [errors, setErrors] = useState([])
+    setErrors(errors);
+  }, [name, address, city, state, country, zipcode, website, phone])
 
   const createBookstore = async (e) => {
     e.preventDefault();
+    setSubmitted(true);
+    if (errors.length) return
+
     const newBookstore = {
+      ownerId: user.id,
       name,
-      website,
       description,
       price,
       category,
       businessHours,
+      website,
       phone,
       address,
       city,
@@ -58,14 +93,13 @@ function BookstoreCreate() {
       // url2:url2,
       // url3:url3,
     };
-    setErrors([]);
-    const data = await dispatch(thunkCreateBookstore(newBookstore));
-    if (data) {
-      setErrors(data);
-    } else {
-      setErrors([]);
-      return history.push(`/bookstoers/${newBookstore.id}`)
-    }
+
+    const res = await dispatch(thunkCreateBookstore(newBookstore))
+    if (res){
+      console.log('res-------', res);
+    history.push(`/bookstores/${res.id}`)}
+
+
   }
 
   return (
@@ -77,7 +111,7 @@ function BookstoreCreate() {
         <form className="create_product_form" onSubmit={createBookstore}>
 
           <div className='login_form_error'>
-            {errors.map((error, ind) => (
+            {submitted & (errors).map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
           </div>
@@ -357,8 +391,10 @@ function BookstoreCreate() {
 
           <div className='create_bookstore_image_container'>
             <ImageCreate />
-
+            <ImageCreate />
+            <ImageCreate />
           </div>
+
 
           <div className="create_product_footer">
             <div className="create_product_footer2">

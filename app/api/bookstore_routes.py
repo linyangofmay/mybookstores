@@ -34,13 +34,14 @@ def currentuser_bookstore():
     return {'bookstores' : [bookstore.to_dict() for bookstore in bookstores]}
 
 #create a bookstore
-@bookstore_routes.route('/new', methods=['POST'])
+@bookstore_routes.route('/new', methods=['GET','POST'])
 @login_required
 def add_bookstore():
     form = BookstoreForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         new_bookstore = Bookstore(
+            ownerId = current_user.id,
             name = form.data['name'],
             description = form.data['description'],
             price = form.data['price'],

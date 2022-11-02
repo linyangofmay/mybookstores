@@ -7,44 +7,47 @@ function CreateImage() {
   const history = useHistory();
   const { bookstoreId } = useParams();
   const dispatch = useDispatch();
-  const [uploadImg, setImg] = useState(null);
-  const [imgUp, setImgUp] = useState(false);
-  const [url, setUrl] = useState('');
+
+  const [createdUrl, setCreatedUrl] = useState('');
+  // const [createdUrl2, setCreatedUrl2] = useState('');
+  // const [createdUrl3, setCreatedUrl3] = useState('');
   const [validationErrors, setValidationErrors] = useState([]);
   const [submitted, setSubmitted] = useState(false);
-
+  const [image, setImage] = useState('')
+  const [error, setErrors] = useState('')
   const user = useSelector(state => state?.session?.user);
-  const reset = () => {
-    setImg(null);
-  }
+  const imageregx = /\.(jpeg|jpg|png|svg)$/
+
+  useEffect(() =>{
+    let errors = []
+    if ((image.length < 2 || !image.split('?')[0].match(imageregx) && !image.includes("https://images.unsplash.com/photo"))) {
+        errors.push("image: must be a valid type: jpg, jpeg, png, svg.")
+      }
+      setErrors(errors)
+
+
+  }, [image])
 
   const createimg = async (e) => {
     e.preventDefault();
-    setImgUp(true);
     setSubmitted(true);
 
-    if (!validationErrors.length) {
-      const payload = {
-        url,
-        bookstoreId
+     const payload = {
+      bookstoreId:bookstoreId,
+      url: createdUrl,
+     }
+     console.log('payload----', payload);
+     let createdimage = await dispatch(thunkCreateImage(payload))
 
-      }
-
-      const newimg = await dispatch(thunkCreateImage(payload));
-      if (newimg) {
-        reset();
-        setSubmitted(false);
-        setImgUp(false);
-        setValidationErrors([]);
-
-      }
-    }
+     if(createdimage){
+      history.push(`/images/bookstores/${payload.id}`)
+     }
   }
 
 
   return (
     <>
-    <div calssName='addimageform'>
+    <div className='addimageform'>
       <form onSubmit={createimg}>
         <div className= 'add_image_errors'>
           {submitted && validationErrors.length>0 && (
@@ -57,24 +60,23 @@ function CreateImage() {
         </div>
 
         <div className='img_url_container'>
-          <h2>Select your images </h2>
-          <input>
+          <h2>Upload your images </h2>
+          <input
               className='create_img_url'
               type ='string'
-              name ='url'
-              value={url}
+              name ='createdUrl'
+              value={createdUrl}
 
-              onChange={(event) => setImg(event.target.value)}
+              onChange={(event) => setCreatedUrl(event.target.value)}
               required
-
-
-          </input>
-
+         />
         </div>
 
+
+
         <div className='cancle_subimt_btn_container'>
-          <button className='addimg_cancle_btn' type='button' onClick={() => reset()}>Cancle</button>
-          <button className='addimg_submit_btm' type ='submit'>Upload</button>
+          {/* <button className='addimg_cancle_btn' type='button' onClick={() => reset()}>Cancle</button> */}
+          {/* <button className='addimg_submit_btm' type ='submit'>Upload</button> */}
         </div>
 
       </form>
