@@ -4,9 +4,10 @@ import { NavLink, useHistory, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import './NavBar.css'
-import LoginForm from '../auth/LoginForm'
+import LoginForm from '../auth/LoginForm';
 import SignUpForm from '../auth/SignUpForm';
 import ProfileButton from './ProfileButton';
+import logo from '../../context/apple-touch-icon.png';
 
 
 
@@ -53,7 +54,7 @@ function NavBar ({isLoaded}) {
 
 
           <NavLink to='/' exact={true} activeClassName='active' className='navLink'>
-            Home
+            <img  className='logo-img' src={logo}/>
           </NavLink>
 
 

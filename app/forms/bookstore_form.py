@@ -59,6 +59,12 @@ def valid_longitude(form, field):
         raise ValidationError('Longitude must be between -180 and 180')
 
 
+# def imageURL_validation(form, field):
+#     img = field.data
+#     if not img[-3:] == 'jpg' and (not img[-3:] == 'png') and img[-4:] != 'jpeg' and img[-4:] != 'webp' and img[-3:] != 'gif' and img[-3:] != 'svg':
+
+#         raise ValidationError("Input must be a valid Image Url")
+
 
 Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
 
@@ -79,3 +85,4 @@ class BookstoreForm(FlaskForm):
     latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])
     longitude = IntegerField('longitude', validators=[DataRequired(), valid_longitude])
     businessHours = StringField('businessHours', validators=[DataRequired()])
+    previewImage = StringField("Image URL", validators= [DataRequired()])

@@ -41,7 +41,7 @@ def add_bookstore():
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         new_bookstore = Bookstore(
-            # ownerId = current_user.id,
+            userId = current_user.id,
             name = form.data['name'],
             description = form.data['description'],
             price = form.data['price'],
@@ -56,6 +56,8 @@ def add_bookstore():
             zipcode = form.data['zipcode'],
             latitude = form.data['latitude'],
             longitude = form.data['longitude'],
+            previewImage = form.date['previewImage'],
+
             createdAt = now,
             updatedAt = now
 
@@ -81,6 +83,7 @@ def update_bookstore(id):
         return {"errors" : "You don't have the right to edit the bookstore"}, 403
 
     if form.validate_on_submit():
+        edit_bookstore =Bookstore.query.get(id)
         edit_bookstore.name = form.data['name'],
         edit_bookstore.description = form.data['description'],
         edit_bookstore.price = form.data['price'],
@@ -95,6 +98,7 @@ def update_bookstore(id):
         edit_bookstore.zipcode = form.data['zipcode'],
         edit_bookstore.latitude = form.data['latitude'],
         edit_bookstore.longitude = form.data['longitude'],
+        edit_bookstore.previewImage = form.data['previewImage']
 
         edit_bookstore.updatedAt = now
 

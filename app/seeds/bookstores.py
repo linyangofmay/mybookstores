@@ -23,6 +23,7 @@ def seed_bookstores():
         zipcode ="94133",
         latitude ="-37.80",
         longitude = "-57.77",
+        previewImage = 'https://images.unsplash.com/photo-1570049795242-90ce0816f888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -43,6 +44,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = "https://images.unsplash.com/photo-1572375755724-4be9f9e8e7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
         createdAt= now,
         updatedAt= now
     )
@@ -62,6 +64,7 @@ def seed_bookstores():
         zipcode ='94118',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1571075002844-e5180c614639?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now,
     )
@@ -81,6 +84,7 @@ def seed_bookstores():
         zipcode ='94305',
         latitude ='37.425',
         longitude = '-122.168',
+        previewImage = 'https://images.unsplash.com/photo-1583679269357-ef97858461de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80',
         createdAt= now,
         updatedAt= now,
     )
@@ -100,6 +104,7 @@ def seed_bookstores():
         zipcode ='94301',
         latitude ='37.44422',
         longitude = '-122.16201',
+        previewImage = 'https://images.unsplash.com/photo-1586459246491-f456f2ca5908?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQxfHxib29rc3RvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -119,6 +124,7 @@ def seed_bookstores():
         zipcode ='94025',
         latitude ='37.45212',
         longitude = '-122.18404',
+        previewImage = 'https://images.unsplash.com/photo-1583526241256-cb18e8635e5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         createdAt= now,
         updatedAt= now
     )
@@ -139,6 +145,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1632743050362-0c61a1ad2462?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         createdAt= now,
         updatedAt= now
     )
@@ -149,7 +156,7 @@ def seed_bookstores():
         price= '$$',
         description ='Check out our website at citylights.com! City Lights Bookstore offers three floors of new-release hardcovers and quality paperbacks from all of the major publishing houses, along with an impressive range of titles from smaller, harder-to-find, specialty publishers. ',
         category= "kids",
-        businessHours='11:30 AM - 11:00 PM',
+        businessHours='11:00 AM - 11:00 PM',
         phone = '4153628193',
         # highlight = "Handmade",
         address ='261 Columbus Ave',
@@ -159,6 +166,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1605344178743-4313131d2c89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -179,6 +187,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage= 'https://images.unsplash.com/photo-1578311639859-c8679fccd561?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM4fHxib29rc3RvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now,
     )
@@ -198,6 +207,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage ='https://images.unsplash.com/photo-1635198585496-4de86ad4154b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
         createdAt= now,
         updatedAt= now,
     )
@@ -217,6 +227,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1635099347794-714586a3a46a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fGFuc2lhbiUyMGJvb2tzdG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -236,6 +247,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1475010040281-9c4f94108f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8N3xCaVF0XzRtdU1na3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -255,6 +267,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage= 'https://images.unsplash.com/photo-1528700850553-6a45e6f143db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzh8QmlRdF80bXVNZ2t8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now,
     )
@@ -274,6 +287,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1566131974163-e49067bc4d6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NDB8QmlRdF80bXVNZ2t8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -293,6 +307,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage= 'https://images.unsplash.com/photo-1580746189551-08cadb65ee61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NDJ8QmlRdF80bXVNZ2t8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now,
     )
@@ -313,6 +328,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1577058005446-f4380dcc4e08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NTB8QmlRdF80bXVNZ2t8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )
@@ -333,6 +349,7 @@ def seed_bookstores():
         zipcode ='94133',
         latitude ='37.79769',
         longitude = '-122.40660',
+        previewImage = 'https://images.unsplash.com/photo-1551133990-60f24c1e4158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NDh8QmlRdF80bXVNZ2t8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         createdAt= now,
         updatedAt= now
     )

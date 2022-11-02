@@ -188,3 +188,8 @@ a.style{
 .sub_header_div {
   display: flex;
 }
+
+.logo-img{
+  height:150px;
+  width:150px;
+}
