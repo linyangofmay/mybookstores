@@ -31,7 +31,7 @@ function BookstoreCreate() {
   // const [url3, setUrl3] = useState('')
   // const [images, setImages] = useState([])
   const [errors, setErrors] = useState([])
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
   const priceArr = ['$', '$$', '$$$', '$$$$']
   const businessHoursArr = [['11:00AM', '7:00PM'], ['10:00AM', '9:00PM'], ['12:00PM', '10:00PM']]
   const categoryArr = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
@@ -70,7 +70,7 @@ function BookstoreCreate() {
 
   const createBookstore = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    // setSubmitted(true);
     if (errors.length) return
 
     const newBookstore = {
@@ -111,7 +111,7 @@ function BookstoreCreate() {
         <form className="create_product_form" onSubmit={createBookstore}>
 
           <div className='login_form_error'>
-            {submitted & (errors).map((error, ind) => (
+            {  (errors).map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
           </div>
@@ -365,7 +365,9 @@ function BookstoreCreate() {
           <div className="create_product_input">
             <div className="create_product_text_box">
               <div>BusinessHours</div>
-
+              <div className="create_product_small_text">
+                  (i.e 09:00 AM - 11:00 PM )
+                </div>
             </div>
             <div>
               <select
@@ -391,7 +393,7 @@ function BookstoreCreate() {
 
           <div className='create_bookstore_image_container'>
             <ImageCreate />
-           
+
           </div>
 
 

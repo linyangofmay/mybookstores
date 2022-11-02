@@ -137,6 +137,11 @@ const initialState = {}
 const bookstoreReducer = (state = initialState, action) => {
   let newState = { ...state }
   switch (action.type) {
+
+    case createBookstore:
+      newState[action.bookstore.id] = action.bookstore;
+      return newState;
+      
     case getAllBookstore:
       newState = {};
       //console.log('action.bookstores.bookstores--------', action.bookstores)

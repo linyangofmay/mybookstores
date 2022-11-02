@@ -11,7 +11,7 @@ from decimal import ROUND_HALF_UP
 def name_validation(form, field):
     #check name is longer than 5 and less than 100 characters
     name = field.data
-    if len(name) <= 1 or len(name) > 1000:
+    if len(name) <= 2 or len(name) > 20:
         raise ValidationError("Name must be more than 5 characters and less than 100 characters")
 
 def description_validation(form, field):
@@ -20,10 +20,10 @@ def description_validation(form, field):
     if len(description) < 20 or len(description) > 2000:
         raise ValidationError("Description must be more than 20 characters and less than 500 characters")
 
-def price_validation(form, field):
-    price = field.data
-    if price >4 or price <1:
-        raise ValidationError("Valid price range must be between 1 and 4")
+# def price_validation(form, field):
+#     price = field.data
+#     if price >4 or price <1:
+#         raise ValidationError("Valid price range must be between 1 and 4")
 
 def valid_phone(form, field):
     phone = field.data
@@ -31,21 +31,21 @@ def valid_phone(form, field):
         raise ValidationError("Valid phone number must be 10 digit numbers")
 def valid_website(form, field):
     website = field.data
-    if len(website) <3 or len(website) >15 or '@' not in website:
-        raise ValidationError('Website must between 4 and 15 letters and contain @')
+    if len(website) <3 or len(website) >100 :
+        raise ValidationError('Website must between 4 and 15 letters ')
 
 def valid_address(form, field):
     address = field.data
-    if len(address) < 3  or len(address) >50:
+    if len(address) < 2  or len(address) >20:
         raise ValidationError("Street address must be between 4 and 50 letters")
 def valid_city(form, field):
     city = field.data
-    if len(city) > 15  or len(city) < 1:
+    if len(city) > 10  or len(city) < 2:
         raise ValidationError('City must be between 2 and 15 letters ')
 
 def valid_state(form, field):
     state = field.data
-    if len(state) > 15  or len(state) < 1:
+    if len(state) > 10  or len(state) < 2:
         raise ValidationError('State must be between 2 and 15 letters ')
 
 def valid_latitude(form, field):
@@ -68,13 +68,14 @@ Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "mult
 class BookstoreForm(FlaskForm):
     name = StringField("name", validators= [DataRequired(), name_validation])
     description = TextAreaField("description", validators= [DataRequired(), description_validation])
-    price = IntegerField("Price", validators=[DataRequired(), price_validation])
+    price = IntegerField("Price", validators=[DataRequired()])
     category = SelectField("category",choices = Categories_Choices, validators=[DataRequired()])
     phone = StringField("phone", validators=[DataRequired(), valid_phone])
     website = StringField('website', validators=[DataRequired(), valid_website])
-    address = StringField('address', validators= [DataRequired(), valid_website])
+    address = StringField('address', validators= [DataRequired(), valid_address])
     city = StringField('city', validators=[DataRequired(), valid_city])
     state = StringField('state', validators=[DataRequired(), valid_state])
+    country = StringField('country', validators=[DataRequired()])
     latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])
     longitude = IntegerField('longitude', validators=[DataRequired(), valid_longitude])
-   
+    businessHours = StringField('businessHours', validators=[DataRequired()])

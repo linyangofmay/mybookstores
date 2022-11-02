@@ -41,7 +41,7 @@ def add_bookstore():
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         new_bookstore = Bookstore(
-            ownerId = current_user.id,
+            # ownerId = current_user.id,
             name = form.data['name'],
             description = form.data['description'],
             price = form.data['price'],
