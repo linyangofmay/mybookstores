@@ -24,12 +24,12 @@ function BookstoreCreate() {
   const [state, setState] = useState('')
   const [country, setCountry] = useState('')
   const [zipcode, setZipcode] = useState('')
-  const [latitude, setLatitude] = useState('')
-  const [longtitude, setLongtitude] = useState('')
-  const [previewImage, setPreviewImage] = useState('')
+  // const [latitude, setLatitude] = useState('')
+  // const [longitude, setLongitude] = useState('')
+  const [previewImage, setPreviewImage] = useState([])
 
   const [errors, setErrors] = useState([])
-  // const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const priceArr = ['$', '$$', '$$$', '$$$$']
   const businessHoursArr = [['07:00 AM - ', '05:00 PM'], ['07:30 AM - ', '05:30 PM'], ['08:00 AM - ', '06:00 PM'], ['08:30 AM - ', '06:30 PM'], ['09:00 AM - ', '07:00 PM'], ['09:30 AM - ', '07:30 PM'], ['10:00 AM - ', '09:00 PM'], ['10:30 AM - ', '09:30 PM'], ['11:00 AM - ', '07:00 PM'], ['11:30 AM - ', '7:30 PM'], ['12:00 PM - ', '10:00 PM']]
   const categoryArr = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
@@ -39,19 +39,19 @@ function BookstoreCreate() {
   const imageregx = /\.(jpeg|jpg|png|svg)$/
   useEffect(() => {
     let errors = [];
-    if (name.length < 2 || name.length > 20) {
+    if (name.length < 2 || name.length > 50) {
       errors.push('name must be between 2 and 20 letters')
     }
-    if (address.length < 2 || name.length > 20) {
+    if (address.length < 2 || name.length > 50) {
       errors.push('address must be between 2 and 20 letters')
     }
-    if (city.length < 2 || name.length > 10) {
+    if (city.length < 2 || name.length > 50) {
       errors.push('city must be between 2 and 10 letters')
     }
-    if (state.length < 2 || name.length > 10) {
+    if (state.length < 2 || name.length > 50) {
       errors.push('name must be between 2 and 10 letters')
     }
-    if (country.length < 2 || name.length > 10) {
+    if (country.length < 2 || name.length > 50) {
       errors.push('country must be between 2 and 10 letters')
     }
     if ((!zipcode.match(zipregx))) {
@@ -61,19 +61,27 @@ function BookstoreCreate() {
       errors.push("business website: must be a valid url ( https://example.ex ).");
     }
     if ((phone.length !== 10 || !phone.match(phoneregx))) {
-      errors.push("business phone: must be 10 sequential numbers ( 1234567890 ).")
+      errors.push("business phone: must be 10 digit numbers ( 1234567890 ).")
     }
      console.log('price========', price)
     // if((!previewImage.split('?')[0].match(imageregx) ) ){
     //   errors.push("image must be jpg, jpeg, png svg et al types")
     // }
+    if (
+      (!previewImage.includes("jpg") &&
+        !previewImage.includes("png") &&
+        !previewImage.includes("jpeg") &&
+        !previewImage.includes("svg")) &&
+      (!previewImage.includes("https") && !previewImage.includes("http"))
+    )
+      errors.push("Please enter a valid url image");
 
     setErrors(errors);
-  }, [name, address, city, state, country, zipcode, website, phone, price])
+  }, [name, address, city, state, country, zipcode, website, phone, price, previewImage])
 
   const createBookstore = async (e) => {
     e.preventDefault();
-    // setSubmitted(true);
+    setSubmitted(true);
     if (errors.length) return
 
     const newBookstore = {
@@ -90,8 +98,8 @@ function BookstoreCreate() {
       state,
       country,
       zipcode,
-      latitude,
-      longtitude,
+      // latitude,
+      // longitude,
       previewImage
 
     };
@@ -114,7 +122,7 @@ function BookstoreCreate() {
         <form className="create_product_form" onSubmit={createBookstore}>
 
           <div className='login_form_error'>
-            {(errors).map((error, ind) => (
+            {submitted && (errors).map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
           </div>
@@ -242,7 +250,7 @@ function BookstoreCreate() {
 
 
 
-
+{/*
           <div className="create_product_input">
             <div className="create_product_text_box">
               <div>latitude</div>
@@ -258,25 +266,25 @@ function BookstoreCreate() {
                 required
               ></input>
             </div>
-          </div>
+          </div> */}
 
 
-          <div className="create_product_input">
+          {/* <div className="create_product_input">
             <div className="create_product_text_box">
-              <div>longtitude</div>
+              <div>longitude</div>
             </div>
 
             <div>
               <input
                 type="number"
-                name="longtitude"
-                value={longtitude}
+                name="longitude"
+                value={longitude}
                 className="create_product_input_inner"
-                onChange={(event) => setLongtitude(event.target.value)}
+                onChange={(event) => setLongitude(event.target.value)}
                 required
               ></input>
             </div>
-          </div>
+          </div> */}
 
 
           <div className="create_product_input">
@@ -441,9 +449,9 @@ function BookstoreCreate() {
               <button
                 className="create_product_button"
                 type="submit"
-                disabled={errors.length > 0}
+                // disabled={errors.length > 0}
               >
-                Create Product
+                List a Bookstore
               </button>
             </div>
           </div>

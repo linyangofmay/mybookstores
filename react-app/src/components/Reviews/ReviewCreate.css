@@ -109,12 +109,18 @@
 .create_review_modal_button {
   cursor: pointer;
   border: none;
-  background: none;
+  background: lightblue;
+  font-family:sans-serif;
+  font-size:15px;
+  font-weight:bold;
+  color:blue;
+  margin-left:135px;
+
 }
 
 .create_review_modal_button:hover {
-  background: none;
-  text-decoration: underline;
+  background: lightblue;
+  text-decoration: none;
 }
 
 .star_click{
@@ -123,4 +129,3 @@
 .star_click:checked~label{
   color:grey;
 }
-

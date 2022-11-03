@@ -48,15 +48,15 @@ def valid_state(form, field):
     if len(state) > 10  or len(state) < 2:
         raise ValidationError('State must be between 2 and 15 letters ')
 
-def valid_latitude(form, field):
-    latitude  = field.data
-    if latitude >90 or latitude < -90:
-        raise ValidationError('Latitude must be between -90 and 90.')
+# def valid_latitude(form, field):
+#     latitude  = field.data
+#     if latitude >90 or latitude < -90:
+#         raise ValidationError('Latitude must be between -90 and 90.')
 
-def valid_longitude(form, field):
-    longitude = field.data
-    if longitude >180 or longitude < -180:
-        raise ValidationError('Longitude must be between -180 and 180')
+# def valid_longitude(form, field):
+#     longitude = field.data
+#     if longitude >180 or longitude < -180:
+#         raise ValidationError('Longitude must be between -180 and 180')
 
 
 # def imageURL_validation(form, field):
@@ -68,15 +68,15 @@ def valid_longitude(form, field):
 
 Categories_Choices = ["usedBooks", "stationary", "CD & Video", "restroom", "multiple stories", "coffee", "kids", "lounge"]
 
-
-
-
+Price_Choices=["$", "$$", "$$$", "$$$$"]
+Business_Choices=[['07:00 AM - ', '05:00 PM'], ['07:30 AM - ', '05:30 PM'], ['08:00 AM - ', '06:00 PM'], ['08:30 AM - ', '06:30 PM'], ['09:00 AM - ', '07:00 PM'], ['09:30 AM - ', '07:30 PM'], ['10:00 AM - ', '09:00 PM'], ['10:30 AM - ', '09:30 PM'], ['11:00 AM - ', '07:00 PM'], ['11:30 AM - ', '7:30 PM'], ['12:00 PM - ', '10:00 PM']]
+#   const businessHoursArr = [['07:00 AM - ', '05:00 PM'], ['07:30 AM - ', '05:30 PM'], ['08:00 AM - ', '06:00 PM'], ['08:30 AM - ', '06:30 PM'], ['09:00 AM - ', '07:00 PM'], ['09:30 AM - ', '07:30 PM'], ['10:00 AM - ', '09:00 PM'], ['10:30 AM - ', '09:30 PM'], ['11:00 AM - ', '07:00 PM'], ['11:30 AM - ', '7:30 PM'], ['12:00 PM - ', '10:00 PM']]
 class BookstoreForm(FlaskForm):
 
     name = StringField("name", validators= [DataRequired(), name_validation])
     description = TextAreaField("description", validators= [DataRequired(), description_validation])
-    price = StringField("price", validators=[DataRequired()])
-    category = SelectField("category",choices = Categories_Choices, validators=[DataRequired()])
+    price =StringField("price", validators=[DataRequired()])
+    category = SelectField("category", choices = Categories_Choices, validators=[DataRequired()])
     phone = StringField("phone", validators=[DataRequired(), valid_phone])
     website = StringField('website', validators=[DataRequired(), valid_website])
     address = StringField('address', validators= [DataRequired(), valid_address])
@@ -84,7 +84,7 @@ class BookstoreForm(FlaskForm):
     state = StringField('state', validators=[DataRequired(), valid_state])
     country = StringField('country', validators=[DataRequired()])
     zipcode = StringField('zipcode', validators=[DataRequired()])
-    latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])
-    longtitude = IntegerField('longtitude', validators=[DataRequired(), valid_longitude])
+    # latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])
+    # longitude = IntegerField('longitude', validators=[DataRequired(), valid_longitude])
     businessHours = StringField('businessHours', validators=[DataRequired()])
     previewImage = StringField("previewImage", validators= [DataRequired()])

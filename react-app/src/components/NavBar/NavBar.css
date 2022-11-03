@@ -1,11 +1,12 @@
 .nav_container{
   height:100px;
   width:100%;
-  border: solid 1px red;
+  /* border: solid 1px red; */
   display:flex;
   flex-direction:row;
 
   justify-content:space-between;
+  align-items: center;
   /* z-index:10; */
   text-decoration: none;
   /* background: linear-gradient(90deg,rgba(76, 148, 230, 0.2),#707eea1a 50%); */
@@ -189,7 +190,65 @@ a.style{
   display: flex;
 }
 
-.logo-img{
-  height:150px;
-  width:150px;
+
+.twologo{
+  display: flex;
+  flex-direction:row;
+  margin-left: 100px;
+}
+
+.navLink{
+  color: blue;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Circular, -apple-system, "system-ui", Roboto, Helvetica Neue,
+  sans-serif;
+  text-decoration: none;
+}
+.homepageword{
+  font-weight: 500;
+  font-family: Circular, -apple-system, "system-ui", Roboto, Helvetica Neue,
+  sans-serif;
+  font-size: 27px;
+  margin-top: 8px;
+  color:#0a31f4;
+}
+.booklog{
+  width:90px;
+  height:60px;
+}
+
+.login-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right:-320px; */
+  height: 35px;
+  width: 80px;
+  border-radius: 12px;
+  transition-duration: 250ms;
+  margin-left:-250px;
+}
+.signup-div{
+  display:flex;
+  margin-left:-100px;
+  
+  justify-content: center;
+  align-items: center;
+  /* margin-right:-320px; */
+  height: 35px;
+  width: 80px;
+  border-radius: 12px;
+  transition-duration: 250ms;
+}
+.login-div:hover{
+  background-color: rgb(248, 244, 244);
+  transition-duration:200ms;
+  cursor:pointer
+
+}
+.signup-div:hover{
+  background-color: rgb(248, 244, 244);
+  transition-duration:200ms;
+  cursor:pointer
 }

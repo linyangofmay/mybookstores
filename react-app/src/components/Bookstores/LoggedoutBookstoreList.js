@@ -61,7 +61,7 @@ function LoggedoutBookstoreList() {
         <div className='recently_activities_container'>
           <div className='recently_activities_subcontainer'>
             {allbookstores &&
-              allbookstores.slice(0,12).map((bookstore) => (
+              allbookstores.slice(0,9).map((bookstore) => (
                 <div className='recent_activity_card' key={bookstore.id}>
                   {/* <NavLink
                   to={`/bookstores/${review.bookstoreId}`}

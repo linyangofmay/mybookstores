@@ -7,7 +7,7 @@ import './NavBar.css'
 import LoginForm from '../auth/LoginForm';
 import SignUpForm from '../auth/SignUpForm';
 import ProfileButton from './ProfileButton';
-import logo from '../../context/apple-touch-icon.png';
+import logo from './logo.png';
 
 
 
@@ -39,12 +39,14 @@ function NavBar ({isLoaded}) {
   } else {
     sessionLinks =(
       <>
+        {/* <div className='loginsignup_container'> */}
         <NavLink to='/login' exact={true} activeClassName='active' className='navLink'>
-            Login
+            <div className='login-div'>Login</div>
         </NavLink>
         <NavLink to='/sign-up' exact={true} activeClassName='active' className='navLink'>
-            Sign Up
+            <div className='signup-div'>Sign Up</div>
         </NavLink>
+
       </>
     );
   }
@@ -54,7 +56,10 @@ function NavBar ({isLoaded}) {
 
 
           <NavLink to='/' exact={true} activeClassName='active' className='navLink'>
-            <img  className='logo-img' src={logo}/>
+            <div className='twologo'>
+            <div><img src={logo} className= 'booklogo'/></div>
+            <div className='homepageword'> iBook </div>
+            </div>
           </NavLink>
 
 

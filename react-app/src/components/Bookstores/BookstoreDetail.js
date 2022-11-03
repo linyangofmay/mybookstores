@@ -87,6 +87,9 @@ function BookstoreDetail() {
                          </div>
 
                     </div>
+
+                      
+
                </div>
 
 
@@ -99,7 +102,7 @@ function BookstoreDetail() {
                     filteredreview.length ? (
                     <div></div>
                ) : (
-                    <div>
+                    <div className='writeareview_btn'>
                          <ReviewCreateModal review={review} />
                     </div>
                )}
@@ -175,11 +178,7 @@ function BookstoreDetail() {
                                    <div>{review.createdAt.slice(0,10)} </div>
                                    </div>
 
-
-
                               </div>
-
-
 
                          </div>
 

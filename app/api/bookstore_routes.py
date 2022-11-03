@@ -59,8 +59,8 @@ def add_bookstore():
             state = form.data['state'],
             country = form.data['country'],
             zipcode = form.data['zipcode'],
-            latitude = form.data['latitude'],
-            longitude = form.data['longtitude'],
+            # latitude = form.data['latitude'],
+            # longitude = form.data['longitude'],
             previewImage = form.data['previewImage'],
 
             createdAt = now,
@@ -77,17 +77,19 @@ def add_bookstore():
 @bookstore_routes.route('/<int:id>/edit', methods=["PUT"])
 @login_required
 def update_bookstore(id):
-
+    print('id=========', id)
     form = BookstoreForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     edit_bookstore = Bookstore.query.get(id)
-
+    print('edit_bookstore=================', edit_bookstore )
+    print('form.data=========', form.data)
     if edit_bookstore is None:
         return {"errors" : "Bookstore couldn't be found"}, 404
     if edit_bookstore.ownerId != current_user.id:
         return {"errors" : "You don't have the right to edit the bookstore"}, 403
-
+    print('before ifffffffff sucessssssss===============')
     if form.validate_on_submit():
+        print('after ifffffffffffff sucessssssss===============')
         edit_bookstore =Bookstore.query.get(id)
         edit_bookstore.name = form.data['name'],
         edit_bookstore.description = form.data['description'],
@@ -101,13 +103,14 @@ def update_bookstore(id):
         edit_bookstore.state = form.data['state'],
         edit_bookstore.country = form.data['country'],
         edit_bookstore.zipcode = form.data['zipcode'],
-        edit_bookstore.latitude = form.data['latitude'],
-        edit_bookstore.longitude = form.data['longitude'],
+        # edit_bookstore.latitude = form.data['latitude'],
+        # edit_bookstore.longitude = form.data['longitude'],
         edit_bookstore.previewImage = form.data['previewImage']
 
         edit_bookstore.updatedAt = now
-
+        print('before commit sucessssssss===============')
         db.session.commit()
+        print('after commit sucessssssss===============')
         return edit_bookstore.to_dict()
     return {"errors" : validation_errors_to_error_messages(form.errors)}, 400
 

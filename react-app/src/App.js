@@ -14,7 +14,7 @@ import BookstoreDetail from './components/Bookstores/BookstoreDetail';
 import MyBookstore from './components/Bookstores/MyBookstore';
 import BookstoreUpdate from './components/Bookstores/BookstoreUpdate';
 import BookstoreCreate from './components/Bookstores/BookstoreCreate';
-import ImageCreate from './components/Bookstores/ImageCreate'
+
 import MyReviews from './components/Reviews/MyReviews'
 
 function App() {
@@ -65,24 +65,21 @@ function App() {
         </Route>
 
         <Route path='/bookstores/new' exact={true}>
+          <NavBar isLoaded={isLoaded}/>
           <BookstoreCreate />
-        </Route>
-
-        <Route path='/bookstores/:id/image' exact={true}>
-          <ImageCreate />
-        </Route>
-
-
-
-        <Route path='/bookstores/:id' exact={true} >
-           <NavBar isLoaded={isLoaded}/>
-           <BookstoreDetail />
         </Route>
 
         <Route path='/bookstores/:id/edit' exact={true} >
            <NavBar isLoaded={isLoaded}/>
            <BookstoreUpdate />
         </Route>
+
+        <Route path='/bookstores/:id' exact={true} >
+           <NavBar isLoaded={isLoaded}/>
+           <BookstoreDetail />
+        </Route>
+
+
 
 
 

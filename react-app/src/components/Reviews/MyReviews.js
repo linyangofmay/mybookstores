@@ -48,7 +48,7 @@ function MyReviews() {
                   <NavLink to={`/bookstores/${review.bookstoreId}`}>
                     <img
                       // src={allbookstores[review.bookstoreId - 1]?.images[0]?.url}
-                      src={review.bookstoreImg[0]?.url}
+                      src={review.bookstoreImg}
                       alt="review"
                       className="my_review_listing_img"
                     ></img>

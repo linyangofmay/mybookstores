@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 2e6cc9fe3203
+Revision ID: 583cb5e2c20e
 Revises: 
-Create Date: 2022-11-02 15:17:03.524395
+Create Date: 2022-11-02 21:12:36.398212
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2e6cc9fe3203'
+revision = '583cb5e2c20e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -36,15 +36,13 @@ def upgrade():
     sa.Column('category', sa.String(length=1000), nullable=False),
     sa.Column('businessHours', sa.String(length=1000), nullable=False),
     sa.Column('website', sa.String(length=500), nullable=True),
-    sa.Column('phone', sa.String(length=50), nullable=False),
+    sa.Column('phone', sa.String(length=10), nullable=False),
     sa.Column('address', sa.String(length=200), nullable=False),
     sa.Column('city', sa.String(length=100), nullable=False),
     sa.Column('state', sa.String(length=100), nullable=False),
     sa.Column('country', sa.String(length=100), nullable=False),
-    sa.Column('zipcode', sa.String(length=50), nullable=False),
-    sa.Column('latitude', sa.Float(precision=20), nullable=False),
-    sa.Column('longitude', sa.Float(precision=20), nullable=False),
-    sa.Column('previewImage', sa.String(length=500), nullable=False),
+    sa.Column('zipcode', sa.String(length=5), nullable=False),
+    sa.Column('previewImage', sa.String(length=1500), nullable=False),
     sa.Column('createdAt', sa.DateTime(), nullable=False),
     sa.Column('updatedAt', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['ownerId'], ['users.id'], ),

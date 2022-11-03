@@ -104,19 +104,23 @@ export const thunkCreateBookstore = (bookstore) => async dispatch => {
   console.log('data========', data.errors)
 }
 
-export const thunkUpdateBookstore = (bookstore) => async dispatch => {
-  const res = await fetch(`/api/bookstores/${bookstore.id}/edit`, {
+export const thunkUpdateBookstore = (bookstore, id) => async dispatch => {
+  const res = await fetch(`/api/bookstores/${id}/edit`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bookstore),
   });
-  //console.log('bookstore-----------', bookstore)
+  console.log('bookstore-----------', bookstore)
+  console.log('id========', id)
 
   if (res.ok) {
       const data = await res.json()
       dispatch(actionUpdateBookstore(data))
       return data
   }
+  //  const data = res.json()
+  //   console.log('updateddata =======', data.errors)
+
 }
 
 export const thunkDeleteBookstore = (id) => async dispatch => {

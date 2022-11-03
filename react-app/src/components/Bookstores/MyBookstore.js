@@ -6,7 +6,8 @@ import { NavLink } from "react-router-dom";
 import BookstoreUpdate from "./BookstoreUpdate";
 
 
-import './MyBookstore.css'
+
+import './MyBookstore.css';
 
 
 function MyBookstore(){
@@ -44,7 +45,7 @@ function MyBookstore(){
               <NavLink to={`/bookstores/${bookstore?.id}`}>
                 <img
                   alt="bookstore"
-                  src={bookstore?.images?.[0].url}
+                  src={bookstore?.previewImage}
                   className="my_product_listing_img"
                 ></img>
               </NavLink>
@@ -57,7 +58,7 @@ function MyBookstore(){
             </div>
 
             <div id= "my_product_listing_btn_container">
-            <Link id="userproducteditbtn" to={`/bookstores/${bookstore?.id}/edit`}>
+            <Link id="userproducteditbtn" to={`/bookstores/${bookstore.id}/edit`}>
                 <button><i className="fa-solid fa-pen-to-square"></i></button>
            </Link>
 

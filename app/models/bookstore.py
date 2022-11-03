@@ -15,15 +15,15 @@ class Bookstore(db.Model):
     category = db.Column(db.String(1000), nullable=False)
     businessHours= db.Column(db.String(1000), nullable=False)
     website = db.Column(db.String(500), nullable=True)
-    phone = db.Column(db.String(50), nullable=False)
+    phone = db.Column(db.String(10), nullable=False)
     address =db.Column(db.String(200), nullable=False)
     city = db.Column(db.String(100), nullable=False)
     state = db.Column(db.String(100), nullable=False)
     country = db.Column(db.String(100), nullable=False)
-    zipcode = db.Column(db.String(50), nullable=False)
-    latitude = db.Column(db.Float(20), nullable=False)
-    longitude = db.Column(db.Float(20), nullable=False)
-    previewImage = db.Column(db.String(500), nullable=False)
+    zipcode = db.Column(db.String(5), nullable=False)
+    # latitude = db.Column(db.Integer, nullable=False)
+    # longitude = db.Column(db.Integer, nullable=False)
+    previewImage = db.Column(db.String(1500), nullable=False)
     createdAt = db.Column(db.DateTime, nullable=False)
     updatedAt = db.Column(db.DateTime, nullable=False)
 
@@ -56,8 +56,8 @@ class Bookstore(db.Model):
             'state':self.state,
             'country':self.country,
             'zipcode':self.zipcode,
-            'latitude':self.latitude,
-            'longitude':self.longitude,
+            # 'latitude':self.latitude,
+            # 'longitude':self.longitude,
             'previewImage': self.previewImage,
             'createdAt':self.createdAt,
             'updatedAt':self.updatedAt,

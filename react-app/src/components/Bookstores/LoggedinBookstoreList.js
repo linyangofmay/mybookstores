@@ -63,7 +63,7 @@ const realAvgStar = Math.round(sum / reviewCount);
       <div className="homepage-background-outercontainer">
         <div className='homepage-background-container homepage-img'></div>
       </div>
-
+      <br></br>
       <div className='homepage_title_container'>
         <div className='homepage_title'>Recent Activity </div>
       </div>
