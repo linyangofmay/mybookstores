@@ -39,19 +39,19 @@ function BookstoreCreate() {
   const imageregx = /\.(jpeg|jpg|png|svg)$/
   useEffect(() => {
     let errors = [];
-    if (name.length < 2 || name.length > 50) {
-      errors.push('name must be between 2 and 20 letters')
+    if (name.length < 2 || name.length > 200) {
+      errors.push('name must be between 2 and 200 letters')
     }
-    if (address.length < 2 || name.length > 50) {
-      errors.push('address must be between 2 and 20 letters')
+    if (address.length < 2 || address.length > 200) {
+      errors.push('address must be between 2 and 200 letters')
     }
-    if (city.length < 2 || name.length > 50) {
+    if (city.length < 1 || city.length > 100) {
       errors.push('city must be between 2 and 10 letters')
     }
-    if (state.length < 2 || name.length > 50) {
+    if (state.length < 1 || state.length > 100) {
       errors.push('name must be between 2 and 10 letters')
     }
-    if (country.length < 2 || name.length > 50) {
+    if (country.length < 2 || country.length > 50) {
       errors.push('country must be between 2 and 10 letters')
     }
     if ((!zipcode.match(zipregx))) {

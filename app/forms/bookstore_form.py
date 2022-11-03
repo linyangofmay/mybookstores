@@ -11,13 +11,13 @@ from decimal import ROUND_HALF_UP
 def name_validation(form, field):
     #check name is longer than 5 and less than 100 characters
     name = field.data
-    if len(name) <= 2 or len(name) > 20:
+    if len(name) < 2 or len(name) > 200:
         raise ValidationError("Name must be more than 5 characters and less than 100 characters")
 
 def description_validation(form, field):
     #check description is longer than 20 characters and less than 500 characters
     description= field.data
-    if len(description) < 20 or len(description) > 2000:
+    if len(description) < 10 or len(description) > 2000:
         raise ValidationError("Description must be more than 20 characters and less than 500 characters")
 
 # def price_validation(form, field):
@@ -36,16 +36,16 @@ def valid_website(form, field):
 
 def valid_address(form, field):
     address = field.data
-    if len(address) < 2  or len(address) >20:
+    if len(address) < 2  or len(address) >200:
         raise ValidationError("Street address must be between 4 and 50 letters")
 def valid_city(form, field):
     city = field.data
-    if len(city) > 10  or len(city) < 2:
+    if len(city) > 100  or len(city) < 1:
         raise ValidationError('City must be between 2 and 15 letters ')
 
 def valid_state(form, field):
     state = field.data
-    if len(state) > 10  or len(state) < 2:
+    if len(state) > 100  or len(state) < 1:
         raise ValidationError('State must be between 2 and 15 letters ')
 
 # def valid_latitude(form, field):

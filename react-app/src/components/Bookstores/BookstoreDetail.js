@@ -83,12 +83,16 @@ function BookstoreDetail() {
                                    src={bookstore?.previewImage}
                                    alt='Bookstore Image'
                               />
-
                          </div>
 
                     </div>
 
-                      
+                    <div>
+                    <div className='bs-top-info'>{bookstore?.name}</div>
+                         
+                    </div>
+
+
 
                </div>
 
@@ -170,12 +174,12 @@ function BookstoreDetail() {
                                    </div>
 
                                    <div className='review_user_profile'>
-                                   <i className="fa-regular fa-circle-user fa-2xl">&nbsp;</i>
-                                   <div>
+                                        <i className="fa-regular fa-circle-user fa-2xl">&nbsp;</i>
+                                        <div>
 
-                                   </div>
-                                   {review.firstName}&nbsp;{review.lastName.slice(0,1)}.&nbsp;
-                                   <div>{review.createdAt.slice(0,10)} </div>
+                                        </div>
+                                        {review.firstName}&nbsp;{review.lastName.slice(0, 1)}.&nbsp;
+                                        <div>{review.createdAt.slice(0, 10)} </div>
                                    </div>
 
                               </div>
