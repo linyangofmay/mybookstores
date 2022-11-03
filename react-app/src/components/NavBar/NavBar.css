@@ -210,12 +210,13 @@ a.style{
   font-family: Circular, -apple-system, "system-ui", Roboto, Helvetica Neue,
   sans-serif;
   font-size: 27px;
-  margin-top: 8px;
+  margin-top: 25px;
+  margin-left:-20px;
   color:#0a31f4;
 }
-.booklog{
-  width:90px;
-  height:60px;
+.booklogo{
+  width:100px;
+  height:70px;
 }
 
 .login-div{
@@ -232,7 +233,7 @@ a.style{
 .signup-div{
   display:flex;
   margin-left:-100px;
-  
+
   justify-content: center;
   align-items: center;
   /* margin-right:-320px; */
@@ -252,3 +253,4 @@ a.style{
   transition-duration:200ms;
   cursor:pointer
 }
+

@@ -67,15 +67,7 @@ function BookstoreDetail() {
 
           <div className='bs_detail_container_outermost'>
                <div className='bs_top_container'>
-                    {/* {imageArr && imageArr.map((image, idx) => (
-                         <div key={idx}>
 
-                              <img alt='bookstore'
-                                   src={image?.url}
-                                   style={{ width: 480, height: 360 }}
-                              ></img>
-                         </div>
-                    ))} */}
                     <div className='bs_banner_container'>
                          <div className='bs_banner_img_container'>
                               <img
@@ -151,10 +143,6 @@ function BookstoreDetail() {
 
                <br></br>
 
-                <div className="business-hours"></div>
-               <br></br>
-
-
                {!user ||
                     bookstore?.ownerId === user?.id ||
                     filteredreview.length ? (
@@ -164,89 +152,141 @@ function BookstoreDetail() {
                          <ReviewCreateModal review={review} />
                     </div>
                )}
+               <div className='bs-bottom-container'>
+                    <div lassName='bs-bottom-hoursandreview-container'>
+                         <div className="business-hours">
 
-               <div>
-                    {reviewCount ? (reviewArr?.map((review, idx) => (
-                         <div className='bottom_review_container_outer' key={idx}>
-                              <div className='bottom_review_container'>
-                                   <div className='review_starts_container'>
-                                        {review.stars === 1 && (
-                                             <div>
-                                                  <FaStar size={20} color="yellow" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                             </div>
-                                        )}
-                                        {review.stars === 2 && (
-                                             <div>
-                                                  <FaStar size={20} color="gold" />
-                                                  <FaStar size={20} color="gold" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                             </div>
-                                        )}
-                                        {review.stars === 3 && (
-                                             <div>
-                                                  <FaStar size={20} color="gold" />
-                                                  <FaStar size={20} color="gold" />
-                                                  <FaStar size={20} color="gold" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                             </div>
-                                        )}
-                                        {review.stars === 4 && (
-                                             <div>
-                                                  <FaStar size={20} color="orange" />
-                                                  <FaStar size={20} color="orange" />
-                                                  <FaStar size={20} color="orange" />
-                                                  <FaStar size={20} color="orange" />
-                                                  <FaStar size={20} color="lightgrey" />
-                                             </div>
-                                        )}
-                                        {review.stars === 5 && (
-                                             <div>
-                                                  <FaStar size={20} color="red" />
-                                                  <FaStar size={20} color="red" />
-                                                  <FaStar size={20} color="red" />
-                                                  <FaStar size={20} color="red" />
-                                                  <FaStar size={20} color="red" />
+                              <div className='business-hours-header'>Business Hours</div>
+                              <div className="day-hours">Monday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Tuesday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Wednesday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Thursday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Friday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Saturday: {bookstore.businessHours}</div>
+                              <div className="day-hours">Sunday: {bookstore.businessHours}</div>
 
-                                             </div>
-                                        )}
-
-                                   </div>
-
-                                   <div>
-                                        <div className='review_container_text'>
-                                             {review?.review}
-
-                                        </div>
-                                        <br></br>
-                                   </div>
-
-                                   <div className='review_user_profile'>
-                                        <i className="fa-regular fa-circle-user fa-2xl">&nbsp;</i>
-                                        <div>
-
-                                        </div>
-                                        {review.firstName}&nbsp;{review.lastName.slice(0, 1)}.&nbsp;
-                                        <div>{review.createdAt.slice(0, 10)} </div>
-                                   </div>
-
-                              </div>
 
                          </div>
 
-                    ))) : (
-                         <div> Would you like to leave a review? </div>
-                    )}
+
+
+                         <div>
+                              {reviewCount ? (reviewArr?.map((review, idx) => (
+                                   <div className='bottom_review_container_outer' key={idx}>
+                                        <div className='bottom_review_container'>
+                                             <div className='review_starts_container'>
+                                                  {review.stars === 1 && (
+                                                       <div>
+                                                            <FaStar size={20} color="yellow" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                       </div>
+                                                  )}
+                                                  {review.stars === 2 && (
+                                                       <div>
+                                                            <FaStar size={20} color="gold" />
+                                                            <FaStar size={20} color="gold" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                       </div>
+                                                  )}
+                                                  {review.stars === 3 && (
+                                                       <div>
+                                                            <FaStar size={20} color="gold" />
+                                                            <FaStar size={20} color="gold" />
+                                                            <FaStar size={20} color="gold" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                       </div>
+                                                  )}
+                                                  {review.stars === 4 && (
+                                                       <div>
+                                                            <FaStar size={20} color="orange" />
+                                                            <FaStar size={20} color="orange" />
+                                                            <FaStar size={20} color="orange" />
+                                                            <FaStar size={20} color="orange" />
+                                                            <FaStar size={20} color="lightgrey" />
+                                                       </div>
+                                                  )}
+                                                  {review.stars === 5 && (
+                                                       <div>
+                                                            <FaStar size={20} color="red" />
+                                                            <FaStar size={20} color="red" />
+                                                            <FaStar size={20} color="red" />
+                                                            <FaStar size={20} color="red" />
+                                                            <FaStar size={20} color="red" />
+
+                                                       </div>
+                                                  )}
+
+                                             </div>
+
+                                             <div>
+                                                  <div className='review_container_text'>
+                                                       {review?.review}
+
+                                                  </div>
+                                                  <br></br>
+                                             </div>
+
+                                             <div className='review_user_profile'>
+                                                  <i className="fa-regular fa-circle-user fa-2xl">&nbsp;</i>
+                                                  <div>
+
+                                                  </div>
+                                                  {review.firstName}&nbsp;{review.lastName.slice(0, 1)}.&nbsp;
+                                                  <div>{review.createdAt.slice(0, 10)} </div>
+                                             </div>
+
+                                        </div>
+
+                                   </div>
+
+                              ))) : (
+                                   <div> </div>
+                              )}
+                         </div>
+                    </div>
+
+                    <div className='bs-right-card'>
+                         <div calssName='bs-right-card-container'>
+                              <div className='right-name'>{bookstore.name}</div>
+
+                              <div className='right-phone'>{bookstore.phone}
+                              <i className="fa-solid fa-phone"></i>
+                              </div>
+
+                               <div className='right-address'>
+                                   <div>
+                                   <div className='right-address-text'> Address</div>
+                                   <div className='right-address-zipcodeandaddress'>
+                                   <div>{bookstore.address}</div>
+                                   <div>{bookstore.zipcode}</div>
+                                   </div>
+
+                                   </div>
+
+
+
+                                   <div className='right-address-label'>
+                                   <i class="fa-solid fa-location-dot"></i>
+                                   </div>
+
+
+                               </div>
+
+
+                              <div className='right-description'>{bookstore.description}</div>
+
+
+                         </div>
+                    </div>
                </div>
 
-
-          </div>
+          </div >
 
 
      )

@@ -55,7 +55,7 @@ function NavBar ({isLoaded}) {
     <nav className='nav_container'>
 
 
-          <NavLink to='/' exact={true} activeClassName='active' className='navLink'>
+          <NavLink exact to='/'   className='navLink'>
             <div className='twologo'>
             <div><img src={logo} className= 'booklogo'/></div>
             <div className='homepageword'> iBook </div>

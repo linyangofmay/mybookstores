@@ -68,7 +68,7 @@ bs_banner_img_container{
   height: 426px;
   position: absolute;
   top: 250px;
-  left: 400px;
+  left: 550px;
   transform: translate(-50%, -50%);
   padding: 40px 64px;
   z-index: 2;
@@ -81,6 +81,106 @@ bs_banner_img_container{
   font-size:20px;
 }
 bs_banner_text_2{
-  height: 170.42px;
-  font-family: 'Open Sans', sans-serif;
+  height: 150px;
+  font-family:  sans-serif;
+}
+
+.business-hours{
+  padding-top:25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid lightgrey;
+  margin-left:120px;
+  margin-right:120px;
+  width:650px;
+
+}
+.business-hours-header{
+  font-size:18px;
+  font-weight:bold;
+  padding-bottom:15px;
+
+}
+.day-hours{
+  font-size:16px;
+  font-weight:500px;
+  padding-top:5px;
+  padding-bottom:5px;
+
+}
+
+.bs-right-card{
+
+  box-sizing:border-box;
+  padding:10px;
+  margin-right:120px;
+}
+.bs-right-card-container{
+  border:1px solid lightgrey;
+
+  padding:15px;
+  border-radius:10px;
+
+}
+.bs-bottom-container{
+  display:flex;
+  flex-direction:row;
+  row-gap:20px;
+  margin-left:140px;
+  margin-right:140px;
+  box-sizing:border-box;
+  justify-content:space-between;
+}
+.bottom_review_container_outer{
+  margin-left:103px;
+}
+.right-phone{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  border-top: 1px solid lightgrey;
+  align-items: space-between;
+  justify-content: space-between;
+  display: flex;
+  font-size:18px;
+  font-weight:bold;
+
+}
+.right-name{
+  font-size:18px;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+
+.right-description{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom:15px;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  word-wrap: break-word;
+  font-size:18px;
+  color:grey;
+
+}
+
+.right-address{
+  display:flex;
+  flex-direction:row;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid lightgrey;
+
+  justify-content: space-between;
+
+}
+.right-address-zipcodeandaddress{
+  display:flex;
+  flex-direction:column;
+
+}
+.right-address-text{
+  font-size:18px;
+  font-weight:bold;
 }
