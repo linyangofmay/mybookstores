@@ -36,7 +36,7 @@ function BookstoreDetail() {
      console.log('reviewArr-----', reviewArr);
      const reviewCount = reviewArr?.length;
      console.log('reviewArrlength-----', reviewArr?.length);
-     const imageArr = bookstore?.images
+
 
      const filteredreview = reviewArr?.filter(
           (item) => item?.userId === user?.id
@@ -87,9 +87,61 @@ function BookstoreDetail() {
 
                     </div>
 
-                    <div>
-                    <div className='bs-top-info'>{bookstore?.name}</div>
-                         
+                    <div className='bs_banner_text_1'>
+                         <div className='bs_banner_text_2'>
+                              <div className='bs-top-info'>{bookstore?.name}</div>
+                              <div className='banner-review'>{reviewCount} Reviews</div>
+                              <div className='review_starts_container'>
+                                   {Math.round(bookstore?.avgstars) === 1 && (
+                                        <div>
+                                             <FaStar size={30} color="yellow" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                        </div>
+                                   )}
+                                   {Math.round(bookstore?.avgstars) === 2 && (
+                                        <div>
+                                             <FaStar size={30} color="gold" />
+                                             <FaStar size={30} color="gold" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                        </div>
+                                   )}
+                                   {Math.round(bookstore?.avgstars) === 3 && (
+                                        <div>
+                                             <FaStar size={30} color="gold" />
+                                             <FaStar size={30} color="gold" />
+                                             <FaStar size={30} color="gold" />
+                                             <FaStar size={30} color="lightgrey" />
+                                             <FaStar size={30} color="lightgrey" />
+                                        </div>
+                                   )}
+                                   {Math.round(bookstore?.avgstars) === 4 && (
+                                        <div>
+                                             <FaStar size={30} color="orange" />
+                                             <FaStar size={30} color="orange" />
+                                             <FaStar size={30} color="orange" />
+                                             <FaStar size={30} color="orange" />
+                                             <FaStar size={30} color="lightgrey" />
+                                        </div>
+                                   )}
+                                   {Math.round(bookstore?.avgstars) === 5 && (
+                                        <div>
+                                             <FaStar size={30} color="red" />
+                                             <FaStar size={30} color="red" />
+                                             <FaStar size={30} color="red" />
+                                             <FaStar size={30} color="red" />
+                                             <FaStar size={30} color="red" />
+
+                                        </div>
+                                   )}
+
+                              </div>
+                         </div>
+
                     </div>
 
 
@@ -98,6 +150,8 @@ function BookstoreDetail() {
 
 
                <br></br>
+
+                <div className="business-hours"></div>
                <br></br>
 
 
