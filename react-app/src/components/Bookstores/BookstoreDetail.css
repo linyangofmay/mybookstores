@@ -1,10 +1,4 @@
-.bs_detail_container_outermost{
 
-}
-.bs_top_container{
-
-
-}
 
 .bs_banner_img{
   width:100%;
@@ -58,8 +52,8 @@ bs_banner_img_container{
   align-items: center;
 }
 .writereview_btn{
-  margin-left:120px;
-  margin-right:120px;
+  margin-left:240px;
+  margin-right:130px;
 }
 
 .bs_banner_text_1{

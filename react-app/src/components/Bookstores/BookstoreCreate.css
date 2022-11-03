@@ -7,9 +7,12 @@
 }
 
 .create_product_form {
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   width: 1000px;
   height: auto;
+  margin-top:90px;
+
+
 }
 
 .create_product_detailtext {
@@ -24,6 +27,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+ margin-top:10px;
 }
 
 .create_product_text_box {
@@ -37,9 +41,9 @@
 }
 
 .create_product_input_inner_descript{
-      width: 850px;
-          height: 60px;
-              border-radius: 5px;
+    width: 850px;
+    height: 60px;
+   border-radius: 5px;
   border: 1px solid grey;
   resize: none;
 }
@@ -111,6 +115,9 @@
 .create_product_error {
   color: red;
   text-align: center;
+  margin-bottom:10px;
+  word-wrap:break-word;
+  margin-top:-50px;
 }
 
 .create_product_empty {

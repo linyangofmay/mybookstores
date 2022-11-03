@@ -121,7 +121,7 @@ function BookstoreCreate() {
         <h1>List a Bookstore</h1>
         <form className="create_product_form" onSubmit={createBookstore}>
 
-          <div className='login_form_error'>
+          <div className='create_product_error'>
             {submitted && (errors).map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
