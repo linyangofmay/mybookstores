@@ -54,25 +54,25 @@ function App() {
            <HomePage />
         </Route>
 
-        <Route path='/bookstores/mybookstores' exact={true}>
+        <ProtectedRoute path='/bookstores/mybookstores' exact={true}>
           <NavBar isLoaded={isLoaded}/>
           <MyBookstore />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path='/myreviews' exact={true}>
+        <ProtectedRoute path='/myreviews' exact={true}>
           <NavBar isLoaded={isLoaded}/>
           <MyReviews />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path='/bookstores/new' exact={true}>
+        <ProtectedRoute path='/bookstores/new' exact={true}>
           <NavBar isLoaded={isLoaded}/>
           <BookstoreCreate />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path='/bookstores/:id/edit' exact={true} >
+        <ProtectedRoute path='/bookstores/:id/edit' exact={true} >
            <NavBar isLoaded={isLoaded}/>
            <BookstoreUpdate />
-        </Route>
+        </ProtectedRoute>
 
         <Route path='/bookstores/:id' exact={true} >
            <NavBar isLoaded={isLoaded}/>

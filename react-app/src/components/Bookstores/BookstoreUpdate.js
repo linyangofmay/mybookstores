@@ -58,28 +58,28 @@ function BookstoreUpdate() {
   useEffect(() => {
     let errors = [];
     if (name?.length < 2 || name?.length > 200) {
-      errors.push('Name must be between 2 and 200 letters')
+      errors.push('Name must be between 2 and 200 letters.')
     }
 
     if (description?.length <20 || description?.length >500){
-      errors.push('Description must be between 20 and 500 letters')
+      errors.push('Description must be between 20 and 500 letters.')
     }
     if (address?.length < 2 || address?.length > 200) {
-      errors.push('Address must be between 2 and 200 letters')
+      errors.push('Address must be between 2 and 200 letters.')
     }
     if (city?.length < 1 || city?.length > 100) {
-      errors.push('City must be between 2 and 100 letters')
+      errors.push('City must be between 2 and 100 letters.')
     }
     if (state?.length < 1 || state?.length > 100) {
-      errors.push('State must be between 2 and 100 letters')
+      errors.push('State must be between 2 and 100 letters.')
     }
     if (country?.length < 2 || country?.length > 50) {
-      errors.push('Country must be between 2 and 10 letters')
+      errors.push('Country must be between 2 and 10 letters.')
     }
     if ((!zipcode?.match(zipregx))) {
       errors.push("Zipcode: must be 5 numbers.")
     }
-    if (website?.length < 2 || !website?.match(webregx)) {
+    if (website?.length < 2 || website.length > 200 || !website?.match(webregx)) {
       errors.push("Business website: must be a valid url ( https://example.ex ).");
     }
     if ((phone?.length !== 10 || !phone?.match(phoneregx))) {
