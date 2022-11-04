@@ -73,15 +73,15 @@ Business_Choices=[['07:00 AM - ', '05:00 PM'], ['07:30 AM - ', '05:30 PM'], ['08
 #   const businessHoursArr = [['07:00 AM - ', '05:00 PM'], ['07:30 AM - ', '05:30 PM'], ['08:00 AM - ', '06:00 PM'], ['08:30 AM - ', '06:30 PM'], ['09:00 AM - ', '07:00 PM'], ['09:30 AM - ', '07:30 PM'], ['10:00 AM - ', '09:00 PM'], ['10:30 AM - ', '09:30 PM'], ['11:00 AM - ', '07:00 PM'], ['11:30 AM - ', '7:30 PM'], ['12:00 PM - ', '10:00 PM']]
 class BookstoreForm(FlaskForm):
 
-    name = StringField("name", validators= [DataRequired(), name_validation])
-    description = TextAreaField("description", validators= [DataRequired(), description_validation])
+    name = StringField("name", validators= [DataRequired()])
+    description = TextAreaField("description", validators= [DataRequired()])
     price =StringField("price", validators=[DataRequired()])
     category = SelectField("category", choices = Categories_Choices, validators=[DataRequired()])
-    phone = StringField("phone", validators=[DataRequired(), valid_phone])
-    website = StringField('website', validators=[DataRequired(), valid_website])
-    address = StringField('address', validators= [DataRequired(), valid_address])
-    city = StringField('city', validators=[DataRequired(), valid_city])
-    state = StringField('state', validators=[DataRequired(), valid_state])
+    phone = StringField("phone", validators=[DataRequired()])
+    website = StringField('website', validators=[DataRequired()])
+    address = StringField('address', validators= [DataRequired()])
+    city = StringField('city', validators=[DataRequired()])
+    state = StringField('state', validators=[DataRequired()])
     country = StringField('country', validators=[DataRequired()])
     zipcode = StringField('zipcode', validators=[DataRequired()])
     # latitude = IntegerField('latitude', validators=[DataRequired(), valid_latitude])

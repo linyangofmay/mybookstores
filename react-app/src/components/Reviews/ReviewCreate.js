@@ -50,7 +50,7 @@ function ReviewCreate({ setShowModal, review }) {
   const onSubmit = async (event) => {
     event.preventDefault();
     setSubmit(!submit);
-    console.log('id=====', id)
+    // console.log('id=====', id)
     const payload = {
       bookstoreId: id,
       stars: stars,

@@ -28,8 +28,8 @@ function MyReviews() {
   const myReviewsArr = Object.values(myReviews)
 
 
-  console.log('myReviewsArr----', myReviewsArr);
-  console.log('myreviews------', myReviews);
+  // console.log('myReviewsArr----', myReviewsArr);
+  // console.log('myreviews------', myReviews);
   const bookstore = useSelector((state) => state.bookstore)
   const allbookstores = Object.values(bookstore)
 

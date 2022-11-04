@@ -57,7 +57,7 @@ const actionDeleteReview = (id) => {
 
 
 export const thunkCreateReview = (payload) => async dispatch => {
-    
+
     const res = await fetch(`/api/reviews/bookstores/${payload.bookstoreId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -133,7 +133,7 @@ export const thunkDeleteReview = (id) => async dispatch => {
 const initialState = {}
 const reviewReducer = (state = initialState, action) => {
     let newState = {...state}
-    console.log(' action123-----',  action)
+    // console.log(' action123-----',  action)
     switch (action.type) {
         case createReview:
             newState[action.review.id] = action.review

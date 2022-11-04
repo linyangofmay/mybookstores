@@ -14,7 +14,7 @@ class Bookstore(db.Model):
     price = db.Column(db.String(100), nullable=False)
     category = db.Column(db.String(1000), nullable=False)
     businessHours= db.Column(db.String(1000), nullable=False)
-    website = db.Column(db.String(500), nullable=True)
+    website = db.Column(db.String(1000), nullable=True)
     phone = db.Column(db.String(10), nullable=False)
     address =db.Column(db.String(200), nullable=False)
     city = db.Column(db.String(100), nullable=False)

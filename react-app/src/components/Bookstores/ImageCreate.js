@@ -36,7 +36,7 @@ function CreateImage() {
       bookstoreId:bookstoreId,
       url: createdUrl,
      }
-     console.log('payload----', payload);
+    //  console.log('payload----', payload);
      let createdimage = await dispatch(thunkCreateImage(payload))
 
      if(createdimage){

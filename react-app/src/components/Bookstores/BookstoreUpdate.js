@@ -11,11 +11,11 @@ function BookstoreUpdate() {
  const user = useSelector((state) => state.session.user);
   const bookstore = useSelector(state => state?.bookstore);
   const bookstoreArr = Object.values(bookstore)
-  console.log('bookstoreArr---', bookstoreArr)
+  // console.log('bookstoreArr---', bookstoreArr)
   const [isLoaded , setIsLoaded] = useState(false);
   const {id} = useParams()
    const editBookstore = bookstoreArr?.find(item => item.id == id)
-   console.log('editBookstore=========', editBookstore);
+  //  console.log('editBookstore=========', editBookstore);
   // const editBookstore = useSelector((state) =>state.bookstore[id])
   //console.log('user-----', user);
   const dispatch = useDispatch()
@@ -58,34 +58,34 @@ function BookstoreUpdate() {
   useEffect(() => {
     let errors = [];
     if (name?.length < 2 || name?.length > 200) {
-      errors.push('name must be between 2 and 200 letters')
+      errors.push('Name must be between 2 and 200 letters')
     }
 
     if (description?.length <20 || description?.length >500){
-      errors.push('description must be between 20 and 500 letters')
+      errors.push('Description must be between 20 and 500 letters')
     }
     if (address?.length < 2 || address?.length > 200) {
-      errors.push('address must be between 2 and 200 letters')
+      errors.push('Address must be between 2 and 200 letters')
     }
     if (city?.length < 1 || city?.length > 100) {
-      errors.push('city must be between 2 and 100 letters')
+      errors.push('City must be between 2 and 100 letters')
     }
     if (state?.length < 1 || state?.length > 100) {
-      errors.push('name must be between  and 100 letters')
+      errors.push('State must be between 2 and 100 letters')
     }
     if (country?.length < 2 || country?.length > 50) {
-      errors.push('country must be between 2 and 10 letters')
+      errors.push('Country must be between 2 and 10 letters')
     }
     if ((!zipcode?.match(zipregx))) {
-      errors.push("zipcode: must be 5 numbers.")
+      errors.push("Zipcode: must be 5 numbers.")
     }
     if (website?.length < 2 || !website?.match(webregx)) {
-      errors.push("business website: must be a valid url ( https://example.ex ).");
+      errors.push("Business website: must be a valid url ( https://example.ex ).");
     }
     if ((phone?.length !== 10 || !phone?.match(phoneregx))) {
-      errors.push("business phone: must be 10 digit numbers ( 1234567890 ).")
+      errors.push("Business phone: must be 10 digit numbers ( 1234567890 ).")
     }
-     console.log('price========', price)
+    //  console.log('price========', price)
     // if((!previewImage.split('?')[0].match(imageregx) ) ){
     //   errors.push("image must be jpg, jpeg, png svg et al types")
     // }
@@ -128,13 +128,13 @@ function BookstoreUpdate() {
 
     const res = await dispatch(thunkUpdateBookstore(updateBookstore, id))
     if (res) {
-      console.log('res-------', res);
+      // console.log('res-------', res);
       history.push(`/bookstores/${res.id}`)
     }
 
 
   }
-  console.log('id======', id)
+  // console.log('id======', id)
 
   return isLoaded &&(
 
@@ -144,7 +144,7 @@ function BookstoreUpdate() {
         <h1>Update a Bookstore</h1>
         <form className="create_product_form" onSubmit={handleSubmit}>
 
-          <div className='login_form_error'>
+          <div className='create_product_error'>
             {submitted && (errors).map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}

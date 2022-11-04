@@ -100,8 +100,8 @@ export const thunkCreateBookstore = (bookstore) => async dispatch => {
       dispatch(actionCreateBookstore(data))
       return data
   }
-  const data = res.json()
-  console.log('data========', data.errors)
+  // const data = res.json()
+  // console.log('data========', data.errors)
 }
 
 export const thunkUpdateBookstore = (bookstore, id) => async dispatch => {
@@ -110,16 +110,19 @@ export const thunkUpdateBookstore = (bookstore, id) => async dispatch => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bookstore),
   });
-  console.log('bookstore-----------', bookstore)
-  console.log('id========', id)
+  // console.log('bookstore-----------', bookstore)
+  // console.log('res.json===========')
+  // console.log('id========', id)
+  // console.log('res.json()==============', res.json())
 
   if (res.ok) {
       const data = await res.json()
+
       dispatch(actionUpdateBookstore(data))
       return data
   }
   //  const data = res.json()
-  //   console.log('updateddata =======', data.errors)
+  //   console.log('updateddata =======', data)
 
 }
 

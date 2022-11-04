@@ -33,13 +33,13 @@ function LoggedinBookstoreList() {
 
 const realAvgStar = Math.round(sum / reviewCount);
   // console.log('reviewArr------', reviewArr);
- console.log('realAvgStar------', realAvgStar)
+//  console.log('realAvgStar------', realAvgStar)
 
 
 
 
 
-  console.log('allbookstores---------', allbookstores);
+  // console.log('allbookstores---------', allbookstores);
   const dispatch = useDispatch()
 
   const user = useSelector((state) => state.session)

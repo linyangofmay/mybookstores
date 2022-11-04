@@ -25,10 +25,10 @@ function LoggedoutBookstoreList() {
 
   const review = useSelector((state) => state.review)
   const reviewArr = Object.values(review)
-  console.log('reviewArr------', reviewArr);
+  // console.log('reviewArr------', reviewArr);
 
 
-  console.log('allbookstores---------', allbookstores);
+  // console.log('allbookstores---------', allbookstores);
   const dispatch = useDispatch()
 
   const user = useSelector((state) => state.session)

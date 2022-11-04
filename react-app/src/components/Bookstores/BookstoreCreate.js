@@ -8,7 +8,7 @@ import './BookstoreCreate.css'
 
 function BookstoreCreate() {
   const user = useSelector((state) => state?.session?.user);
-  console.log('user-----', user);
+  // console.log('user-----', user);
   const dispatch = useDispatch()
   const history = useHistory()
   // const [ownerId, setOwnerId] = useState('');
@@ -40,33 +40,33 @@ function BookstoreCreate() {
   useEffect(() => {
     let errors = [];
     if (name.length < 2 || name.length > 200) {
-      errors.push('name must be between 2 and 200 letters')
+      errors.push('Name must be between 2 and 200 letters')
     }
     if (description.length <20 || description.length >500){
-      errors.push('description must be between 20 and 500 letters')
+      errors.push('Description must be between 20 and 500 letters')
     }
     if (address.length < 2 || address.length > 200) {
-      errors.push('address must be between 2 and 200 letters')
+      errors.push('Address must be between 2 and 200 letters')
     }
     if (city.length < 1 || city.length > 100) {
-      errors.push('city must be between 2 and 10 letters')
+      errors.push('City must be between 2 and 10 letters')
     }
     if (state.length < 1 || state.length > 100) {
-      errors.push('name must be between 2 and 10 letters')
+      errors.push('State must be between 2 and 10 letters')
     }
     if (country.length < 2 || country.length > 50) {
-      errors.push('country must be between 2 and 10 letters')
+      errors.push('Country must be between 2 and 10 letters')
     }
     if ((!zipcode.match(zipregx))) {
       errors.push("zipcode: must be 5 numbers.")
     }
-    if (website.length < 2 || !website.match(webregx)) {
-      errors.push("business website: must be a valid url ( https://example.ex ).");
+    if (website.length < 2 || !website.match(webregx) || website.length>200) {
+      errors.push("Business website: must be a valid url ( https://example.ex ).");
     }
     if ((phone.length !== 10 || !phone.match(phoneregx))) {
-      errors.push("business phone: must be 10 digit numbers ( 1234567890 ).")
+      errors.push("Business phone: must be 10 digit numbers ( 1234567890 ).")
     }
-     console.log('price========', price)
+    //  console.log('price========', price)
     // if((!previewImage.split('?')[0].match(imageregx) ) ){
     //   errors.push("image must be jpg, jpeg, png svg et al types")
     // }
@@ -75,7 +75,7 @@ function BookstoreCreate() {
         !previewImage.includes("png") &&
         !previewImage.includes("jpeg") &&
         !previewImage.includes("svg")) &&
-      (!previewImage.includes("https") && !previewImage.includes("http"))
+      (!previewImage.includes("https://images.unsplash.com/") )
     )
       errors.push("Please enter a valid url image");
 
@@ -88,7 +88,7 @@ function BookstoreCreate() {
     if (errors.length) return
 
     const newBookstore = {
-
+      // owner_id: user.id,
       name,
       description,
       price,
@@ -109,7 +109,7 @@ function BookstoreCreate() {
 
     const res = await dispatch(thunkCreateBookstore(newBookstore))
     if (res) {
-      console.log('res-------', res);
+      // console.log('res-------', res);
       history.push(`/bookstores/${res.id}`)
     }
 

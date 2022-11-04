@@ -19,11 +19,11 @@ function BookstoreDetail() {
      const history = useHistory();
      //   const bookstore = useSelector((state)=> state.bookstore[id]);
      const bookstore = useSelector((state) => {
-          console.log('state----', state)
+          // console.log('state----', state)
           return state.bookstore[id]
      });
 
-     console.log('bookstore-----', bookstore)
+     // console.log('bookstore-----', bookstore)
      const user = useSelector((state) => state.session.user);
      const review = useSelector((state) => state.review);
      const reviewArr = Object.values(review);
@@ -33,15 +33,15 @@ function BookstoreDetail() {
 
      const today = new Date();
 
-     console.log('reviewArr-----', reviewArr);
+     // console.log('reviewArr-----', reviewArr);
      const reviewCount = reviewArr?.length;
-     console.log('reviewArrlength-----', reviewArr?.length);
+     // console.log('reviewArrlength-----', reviewArr?.length);
 
 
      const filteredreview = reviewArr?.filter(
           (item) => item?.userId === user?.id
      )
-     console.log('filteredreview----', filteredreview);
+     // console.log('filteredreview----', filteredreview);
 
 
 
