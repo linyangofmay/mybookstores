@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { thunkGetAllBookstore } from "../../store/bookstore";
 import { thunkGetAllReview } from "../../store/review"
-
+import { FaStar } from 'react-icons/fa'
 
 import './LoggedinBookstoreList.css'
 
@@ -46,152 +46,157 @@ function LoggedoutBookstoreList() {
 
 
 
-    return (
+  return (
 
-      <div className='homepage_outermost'>
+    <div className='homepage_outermost'>
 
-        <div className="homepage-background-outercontainer">
+      {/* <div className="homepage-background-outercontainer">
           <div className='homepage-background-container homepage-img'></div>
-        </div>
+        </div> */}
+      <br></br>
+      <br></br>
+      <div className='homepage_title_container'>
+        <div className='homepage_title'>Recently Added Bookstores </div>
+      </div>
 
-        <div className='homepage_title_container'>
-          <div className='homepage_title'>Your Next Bookstore </div>
-        </div>
-
-        <div className='recently_activities_container'>
-          <div className='recently_activities_subcontainer'>
-            {allbookstores &&
-              allbookstores.slice(0,9).map((bookstore) => (
-                <div className='recent_activity_card' key={bookstore.id}>
-                  {/* <NavLink
+      <div className='recently_activities_container'>
+        <div className='recently_activities_subcontainer'>
+          {allbookstores &&
+            allbookstores.reverse().slice(0, 9).map((bookstore) => (
+              <div className='recent_activity_card' key={bookstore.id}>
+                {/* <NavLink
                   to={`/bookstores/${review.bookstoreId}`}
                   className="hompage_navlink"
                 > */}
 
-                  <div className='recent_activity_user_container'>
+                <div className='recent_activity_user_container'>
 
-                    <div className='ra_user_profile'><i className="fas fa-user-circle fa-2x" /> </div>
+                  {/* <div className='ra_user_profile'><i className="fas fa-user-circle fa-2x" /> </div> */}
 
-                    <div className='recenty_activity_user_name_container'>
+                  {/* <div className='recenty_activity_user_name_container'>
                       <div className='ra_user_name'>{bookstore?.reviews[0]?.firstName}&nbsp; {bookstore?.reviews[0]?.lastName.slice(0, 1)}. </div>
                       <div className='ra_user_name_wrote'>Wrote a review</div>
+                    </div> */}
+
+
+                </div>
+
+
+
+
+                <img className='recent_activity_image'
+                  // src={bookstore?.images[0]?.url}
+                  src={bookstore?.previewImage}
+                  alt="bookstore"
+
+                />
+
+                <div className='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name' to={`/bookstores/${bookstore.id}`}>
+                    {bookstore.name}
+                    <div className='middle_address'>
+                      <div>{bookstore.address}</div>
+                      <div>{bookstore.city} {bookstore.state}</div>
+
                     </div>
 
-
-                  </div>
-
-
+                  </NavLink>
+                </div>
 
 
-                  <img className='recent_activity_image'
-                    // src={bookstore?.images[0]?.url}
-                    src={bookstore?.previewImage}
-                    alt="bookstore"
+                <div className='ra_reviewstars'>
 
-                  />
-
-                  <div className ='ra_bookstorename_container'>
-                    <NavLink className='ra_bs_name'  to={`/bookstores/${bookstore.id}`}>
-                     {bookstore.name}
-                    </NavLink>
-                  </div>
-
-                  <div className='ra_reviewstars'>
-                  {Math.round(bookstore.avgstars) === 5 && (
-                     <div className='fivestars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
+                  {Math.round(bookstore?.avgstars) === 1 && (
+                    <div>
+                      <FaStar size={30} color="yellow" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
                     </div>
-
+                  )}
+                  {Math.round(bookstore?.avgstars) === 2 && (
+                    <div>
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                    </div>
+                  )}
+                  {Math.round(bookstore?.avgstars) === 3 && (
+                    <div>
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                    </div>
+                  )}
+                  {Math.round(bookstore?.avgstars) === 4 && (
+                    <div>
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="lightgrey" />
+                    </div>
                   )}
 
-                   {Math.round(bookstore.avgstars) === 4 && (
 
-                     <div className='fourstars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
+
+                  {Math.round(bookstore?.avgstars) === 5 && (
+                    <div>
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+
                     </div>
-                   )}
-
-                    {Math.round(bookstore.avgstars) === 3 && (
-                     <div className='threestars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                    </div>
-
-                  )}
-
-                   {Math.round(bookstore.avgstars) === 2 && (
-                     <div className='twostars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                    </div>
-
-                  )}
-
-                    {Math.round(bookstore.avgstars) === 1 && (
-                     <div className='onestar'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                    </div>
-
                   )}
 
                   {Math.round(bookstore.avgstars) === 0 && (
-                     <div className='zerostar'>
-                      <i class="fas fa-regular fa-star fa-2xl "></i>
-                      <i class="fas fa-regular fa-star fa-2xl "></i>
-                      <i class="fas fa-regular fa-star fa-2xl "></i>
-                      <i class="fas fa-regular fa-star fa-2xl "></i>
-                      <i class="fas fa-regular fa-star fa-2xl "></i>
+                    <div>
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+
                     </div>
 
                   )}
 
                 </div>
-                  <div style = {{fontweight:"700"}} className='ra_review' >
-                    {bookstore?.reviews[0]?.review.slice(0,83) + '...'}
-                  </div>
-
-
-
-                  <div className ='ra_bookstorename_container'>
-                    <NavLink className='ra_bs_name'  to={`/bookstores/${bookstore.id}`}>
-                     Continue reading
-                    </NavLink>
-                  </div>
-
-
-
-
-
-
-
-
-                  {/* </NavLink> */}
+                <div style={{ fontweight: "700" }} className='ra_review' >
+                  {bookstore?.description.slice(0, 83) + '...'}
                 </div>
 
-              ))}
-          </div>
+
+
+                <div className='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name' to={`/bookstores/${bookstore.id}`}>
+                    Continue reading
+                  </NavLink>
+                </div>
+
+
+
+
+
+
+
+
+                {/* </NavLink> */}
+              </div>
+
+            ))}
         </div>
       </div>
+    </div>
 
-    )
+  )
 }
 
 export default LoggedoutBookstoreList

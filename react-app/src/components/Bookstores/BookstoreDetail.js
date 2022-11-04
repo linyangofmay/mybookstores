@@ -256,27 +256,30 @@ function BookstoreDetail() {
                               <div className='right-name'>{bookstore.name}</div>
 
                               <div className='right-phone'>{bookstore.phone}
-                              <i className="fa-solid fa-phone"></i>
+                                   <i className="fa-solid fa-phone"></i>
                               </div>
 
-                               <div className='right-address'>
+                              <div className='right-address'>
                                    <div>
-                                   <div className='right-address-text'> Address</div>
-                                   <div className='right-address-zipcodeandaddress'>
-                                   <div>{bookstore.address}</div>
-                                   <div>{bookstore.zipcode}</div>
-                                   </div>
+                                        <div className='right-address-text'> Address</div>
+                                        <div className='right-address-zipcodeandaddress'>
+                                             <div>{bookstore.address}</div>
+                                             <div>{bookstore.city}</div>
+                                             <div>{bookstore.state}</div>
+                                             <div>{bookstore.country}</div>
+                                             <div>{bookstore.zipcode}</div>
+                                        </div>
 
                                    </div>
 
 
 
                                    <div className='right-address-label'>
-                                   <i class="fa-solid fa-location-dot"></i>
+                                        <i class="fa-solid fa-location-dot"></i>
                                    </div>
 
 
-                               </div>
+                              </div>
 
 
                               <div className='right-description'>{bookstore.description}</div>

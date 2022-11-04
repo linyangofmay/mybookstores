@@ -37,8 +37,8 @@ function ReviewCreate({ setShowModal, review }) {
     const errors = [];
     if (stars <= 0 || stars > 5)
       errors.push("Stars must be greater than 0 and less than 5");
-    if (createdReview.length < 20)
-      errors.push("Please add a review more than 20 characters long");
+    if (createdReview.length < 20 || createdReview.length >1000 )
+      errors.push("Please add a review between 20 and 1000 characters.");
 
     setValidations(errors);
   }, [stars, createdReview]);

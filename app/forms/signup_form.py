@@ -22,7 +22,9 @@ def firstName_length(form, field):
     # Checking if username is longer than 3
     firstName = field.data
     if len(firstName) < 2:
-        raise ValidationError('Username must be more than 2 characters.')
+        raise ValidationError('First name must be more than 2 characters.')
+
+
 
 def validate_email(form, field):
     email = field.data

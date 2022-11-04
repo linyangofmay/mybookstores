@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect, NavLink, useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
@@ -12,15 +12,41 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
+  useEffect(() =>{
+    let errors =[];
+    if (firstName.length <2 || firstName.length >30){
+      errors.push('First name must be between 2 and 30 characters')
+    }
+
+    if (lastName.length <2 || firstName.length >30){
+      errors.push('Last name must be between 2 and 30 characters')
+    }
+    if (!email.includes('@') || !email.includes('.') || !(email.includes('.com') || email.includes('.io') || email.includes('.net')))
+    errors.push('Please sign up with a valid email.')
+    if (email.length <2 || email.length >30){
+      errors.push('Email must be between 2 and 30 characters.')
+    }
+    if (password.length <6 || password.length >20) {
+      errors.push('Passowrd must be between 6 and 20 characters.')
+    }
+    if (password !== repeatPassword){
+      errors.push('Password must match.')
+    }
+    setErrors(errors);
+  }, [firstName, lastName, email, password, repeatPassword]);
+
   const onSignUp = async (e) => {
     e.preventDefault();
+    setSubmitted(true);
+    if (errors.length  > 0) return
     if (password === repeatPassword) {
       const data = await dispatch(signUp(firstName, lastName, email, password));
       if (data) {
-        setErrors(data)
+        setErrors(Object.values(data));
       }
     }
   };
@@ -59,8 +85,8 @@ const SignUpForm = () => {
 
         <form onSubmit={onSignUp} className='login_form'>
 
-          <div className='login_form_error'>
-            {errors.map((error, ind) => (
+          <div className='signup_form_error'>
+            {submitted && errors.map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
           </div>
@@ -80,7 +106,7 @@ const SignUpForm = () => {
               name='firstName'
               onChange={updatefirstName}
               value={firstName}
-              placeholder='firstName'
+              placeholder='First name'
               required={true}
             ></input>
 
@@ -93,14 +119,14 @@ const SignUpForm = () => {
               name='lastName'
               onChange={updatelastName}
               value={lastName}
-              placeholder='lastName'
+              placeholder='Last name'
               required={true}
             ></input>
           </div>
 
           <br></br>
 
-         
+
 
           <div>
             {/* <label className='signup_label'>Email</label> */}

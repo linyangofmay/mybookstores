@@ -45,9 +45,11 @@ const LoginForm = () => {
         <form onSubmit={onLogin} className='login_form'>
 
           <div className='login_form_error'>
+
             {errors.map((error, ind) => (
               <div key={ind}>{error}</div>
             ))}
+            
           </div>
 
           <div>

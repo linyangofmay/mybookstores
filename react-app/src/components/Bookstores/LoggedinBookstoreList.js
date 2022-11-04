@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { thunkGetAllBookstore } from "../../store/bookstore";
-import { thunkGetAllReview } from "../../store/review"
-
+import { thunkGetAllReview } from "../../store/review";
+import LoggedoutBookstoreList from './LoggedoutBookstoreList';
 import './LoggedinBookstoreList.css'
 
 function LoggedinBookstoreList() {
@@ -60,11 +60,16 @@ const realAvgStar = Math.round(sum / reviewCount);
 
     <div className='homepage_outermost'>
 
-      <div className="homepage-background-outercontainer">
+
+      {/* <div className="homepage-background-outercontainer">
         <div className='homepage-background-container homepage-img'></div>
-      </div>
+      </div> */}
+      <br></br>
+      <LoggedoutBookstoreList />
+      <br></br>
       <br></br>
       <div className='homepage_title_container'>
+
         <div className='homepage_title'>Recent Activity </div>
       </div>
 

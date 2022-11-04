@@ -11,6 +11,9 @@ function HomePage(){
 
   return (
     <>
+     <div className="homepage-background-outercontainer">
+          <div className='homepage-background-container homepage-img'></div>
+        </div>
     { user.user ? ( < LoggedinBookstoreList/>  ) :
     (<LoggedoutBookstoreList/>) }
 

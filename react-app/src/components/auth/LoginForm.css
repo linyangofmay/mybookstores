@@ -33,15 +33,25 @@
 
 
 .login_form_error{
-  width:270px;
+  width:276px;
   top:10px;
   font-weight:450;
   color:#d32323;
   display: flex;
-  text-align: start;
-  justify-content: start;
+  flex-direction:column;
+  column-gap:5px;
+  row-gap:5px;
+  word-wrap:break-word;
+  justify-content:start;
+  align-items:flex-start;
+  line-height:10px;
+  height:10px;
+  color:#FF385C;
+  padding-top:20px;
+  padding-bottom:15px;
+  /* justify-content: start;
   align-items: flex-start;
-  line-height: 5px;
+  line-height: 10px;
   height: 5px;
   height: fit-content;
   width: max-content;

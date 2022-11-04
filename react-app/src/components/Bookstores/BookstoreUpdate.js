@@ -60,6 +60,10 @@ function BookstoreUpdate() {
     if (name?.length < 2 || name?.length > 200) {
       errors.push('name must be between 2 and 200 letters')
     }
+
+    if (description?.length <20 || description?.length >500){
+      errors.push('description must be between 20 and 500 letters')
+    }
     if (address?.length < 2 || address?.length > 200) {
       errors.push('address must be between 2 and 200 letters')
     }
@@ -69,16 +73,16 @@ function BookstoreUpdate() {
     if (state?.length < 1 || state?.length > 100) {
       errors.push('name must be between  and 100 letters')
     }
-    if (country.length < 2 || country.length > 50) {
+    if (country?.length < 2 || country?.length > 50) {
       errors.push('country must be between 2 and 10 letters')
     }
-    if ((!zipcode.match(zipregx))) {
+    if ((!zipcode?.match(zipregx))) {
       errors.push("zipcode: must be 5 numbers.")
     }
-    if (website.length < 2 || !website.match(webregx)) {
+    if (website?.length < 2 || !website?.match(webregx)) {
       errors.push("business website: must be a valid url ( https://example.ex ).");
     }
-    if ((phone.length !== 10 || !phone.match(phoneregx))) {
+    if ((phone?.length !== 10 || !phone?.match(phoneregx))) {
       errors.push("business phone: must be 10 digit numbers ( 1234567890 ).")
     }
      console.log('price========', price)
@@ -86,16 +90,16 @@ function BookstoreUpdate() {
     //   errors.push("image must be jpg, jpeg, png svg et al types")
     // }
     if (
-      (!previewImage.includes("jpg") &&
-        !previewImage.includes("png") &&
-        !previewImage.includes("jpeg") &&
-        !previewImage.includes("svg")) &&
-      (!previewImage.includes("https") && !previewImage.includes("http"))
+      (!previewImage?.includes("jpg") &&
+        !previewImage?.includes("png") &&
+        !previewImage?.includes("jpeg") &&
+        !previewImage?.includes("svg")) &&
+      (!previewImage?.includes("https") && !previewImage?.includes("http"))
     )
       errors.push("Please enter a valid url image");
 
     setErrors(errors);
-  }, [name, address, city, state, country, zipcode, website, phone, price, previewImage])
+  }, [name, description, address,  city, state, country, zipcode, website, phone, price, previewImage])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -17,7 +17,7 @@ def name_validation(form, field):
 def description_validation(form, field):
     #check description is longer than 20 characters and less than 500 characters
     description= field.data
-    if len(description) < 10 or len(description) > 2000:
+    if len(description) < 20 or len(description) > 500:
         raise ValidationError("Description must be more than 20 characters and less than 500 characters")
 
 # def price_validation(form, field):

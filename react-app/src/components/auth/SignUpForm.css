@@ -26,3 +26,21 @@
   margin-left:20px;
 
 }
+
+.signup_form_error{
+  display:flex;
+  flex-direction:row;
+  row-gap:5px;
+  flex-wrap:wrap;
+  word-wrap:break-word;
+  justify-content:start;
+  align-items: flex-start;
+  line-height:15px;
+  height:10px;
+  color:#FF385C;
+  width:276px;
+  padding-top:20px;
+  padding-bottom:30px;
+
+
+}

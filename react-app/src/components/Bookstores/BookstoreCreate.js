@@ -42,6 +42,9 @@ function BookstoreCreate() {
     if (name.length < 2 || name.length > 200) {
       errors.push('name must be between 2 and 200 letters')
     }
+    if (description.length <20 || description.length >500){
+      errors.push('description must be between 20 and 500 letters')
+    }
     if (address.length < 2 || address.length > 200) {
       errors.push('address must be between 2 and 200 letters')
     }
@@ -77,7 +80,7 @@ function BookstoreCreate() {
       errors.push("Please enter a valid url image");
 
     setErrors(errors);
-  }, [name, address, city, state, country, zipcode, website, phone, price, previewImage])
+  }, [name, description, address, city, state, country, zipcode, website, phone, price, previewImage])
 
   const createBookstore = async (e) => {
     e.preventDefault();
@@ -335,6 +338,7 @@ function BookstoreCreate() {
                 name="price"
                 value={price}
                 onChange={(event) => setPrice(event.target.value)}
+
                 className="create_product_input_inner"
               >
                 <option value="" disabled>

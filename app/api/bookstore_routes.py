@@ -14,7 +14,7 @@ bookstore_routes = Blueprint('bookstores', __name__)
 
 def bookstores():
     bookstores = Bookstore.query.all()
-    print('bookstores------', bookstores)
+    # print('bookstores------', bookstores)
     return {'bookstores': [bookstore.to_dict() for bookstore in bookstores]}
 
 #get one bookstore

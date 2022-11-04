@@ -156,12 +156,17 @@ bs_banner_text_2{
   word-wrap: break-word;
   font-size:18px;
   color:grey;
+  overflow-wrap:break-word;
+  max-width:290px;
 
 }
 
 .right-address{
   display:flex;
   flex-direction:row;
+  flex-wrap:wrap;
+  word-wrap:break-word;
+  max-width:350px;
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid lightgrey;
