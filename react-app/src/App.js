@@ -8,14 +8,13 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
-
 import HomePage from './components/Bookstores/HomePage';
 import BookstoreDetail from './components/Bookstores/BookstoreDetail';
 import MyBookstore from './components/Bookstores/MyBookstore';
 import BookstoreUpdate from './components/Bookstores/BookstoreUpdate';
 import BookstoreCreate from './components/Bookstores/BookstoreCreate';
-
-import MyReviews from './components/Reviews/MyReviews'
+import MyReviews from './components/Reviews/MyReviews';
+import Footer from './components/Footer';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -87,6 +86,7 @@ function App() {
 
 
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
