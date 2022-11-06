@@ -170,7 +170,7 @@ function LoggedoutBookstoreList() {
 
                 </div>
                 <div style={{ fontweight: "700" }} className='ra_review' >
-                  {bookstore?.description.slice(0, 83) + '...'}
+                  {bookstore?.description.slice(0, 79) + '...'}
                 </div>
 
 

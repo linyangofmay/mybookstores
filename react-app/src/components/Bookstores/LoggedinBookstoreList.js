@@ -69,8 +69,9 @@ function LoggedinBookstoreList() {
       <LoggedoutBookstoreList />
       <br></br>
       <br></br>
-      <div className='homepage_title_container'>
 
+      <div className='homepage_title_container'>
+          <br></br>
         <div className='homepage_title'>Recent Activity </div>
       </div>
 
@@ -184,7 +185,7 @@ function LoggedinBookstoreList() {
 
 
                 <div style={{ fontweight: "700" }} className='ra_review' >
-                  {review?.review.slice(0, 83) + '...'}
+                  {review?.review.slice(0, 79) + '...'}
                 </div>
 
 
