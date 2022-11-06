@@ -6,6 +6,7 @@ import { thunkGetAllBookstore } from "../../store/bookstore";
 import { thunkGetAllReview } from "../../store/review";
 import LoggedoutBookstoreList from './LoggedoutBookstoreList';
 import './LoggedinBookstoreList.css'
+import { FaStar } from 'react-icons/fa'
 
 function LoggedinBookstoreList() {
   const bookstore = useSelector((state) => state.bookstore)
@@ -28,12 +29,12 @@ function LoggedinBookstoreList() {
   const avgStar = reviewArr?.map((review) => review.stars);
   let sum = 0;
   avgStar.forEach((review) => {
-  sum += review;
+    sum += review;
   });
 
-const realAvgStar = Math.round(sum / reviewCount);
+  const realAvgStar = Math.round(sum / reviewCount);
   // console.log('reviewArr------', reviewArr);
-//  console.log('realAvgStar------', realAvgStar)
+  //  console.log('realAvgStar------', realAvgStar)
 
 
 
@@ -48,11 +49,11 @@ const realAvgStar = Math.round(sum / reviewCount);
 
 
 
-    useEffect(() => {
-      dispatch(thunkGetAllBookstore())
+  useEffect(() => {
+    dispatch(thunkGetAllBookstore())
 
-      dispatch(thunkGetAllReview())
-    }, [dispatch])
+    dispatch(thunkGetAllReview())
+  }, [dispatch])
 
 
 
@@ -105,73 +106,76 @@ const realAvgStar = Math.round(sum / reviewCount);
 
                 />
 
-                <div className ='ra_bookstorename_container'>
-                  <NavLink className='ra_bs_name'  to={`/bookstores/${review.bookstoreId}`}>
-                   {review.bookstorename}
+                <div className='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name' to={`/bookstores/${review.bookstoreId}`}>
+                    {review.bookstorename}
                   </NavLink>
                 </div>
 
                 <div className='ra_reviewstars'>
-                  {realAvgStar === 5 && (
-                     <div className='fivestars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                    </div>
 
+
+                  {review?.stars === 1 && (
+                    <div>
+                      <FaStar size={30} color="yellow" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                    </div>
                   )}
-
-                   {realAvgStar === 4 && (
-                     <div className='fourstars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-
+                  {review?.stars === 2 && (
+                    <div>
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
                     </div>
-                   )}
-
-                    {realAvgStar === 3 && (
-                     <div className='threestars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-
-                    </div>
-
                   )}
-
-                   {realAvgStar === 2 && (
-                     <div className='twostars'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-
+                  {review?.stars === 3 && (
+                    <div>
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="gold" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
                     </div>
-
                   )}
-
-                    {realAvgStar === 1 && (
-                     <div className='onestar'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-
+                  {review?.stars === 4 && (
+                    <div>
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="orange" />
+                      <FaStar size={30} color="lightgrey" />
                     </div>
-
-                  )}
-
-                  {realAvgStar === 0 && (
-                     <div className='zerostar'>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                      <i class="fas fa-solid fa-star fa-2xl "></i>
-                    </div>
-
                   )}
 
 
+
+                  {review?.stars === 5 && (
+                    <div>
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+                      <FaStar size={30} color="red" />
+
+                    </div>
+                  )}
+
+                  {review?.stars === 0 && (
+                    <div>
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+                      <FaStar size={30} color="lightgrey" />
+
+                    </div>
+
+                  )}
 
 
                 </div>
@@ -179,15 +183,15 @@ const realAvgStar = Math.round(sum / reviewCount);
 
 
 
-                <div style = {{fontweight:"700"}} className='ra_review' >
-                  {review?.review.slice(0,83) + '...'}
+                <div style={{ fontweight: "700" }} className='ra_review' >
+                  {review?.review.slice(0, 83) + '...'}
                 </div>
 
 
 
-                <div className ='ra_bookstorename_container'>
-                  <NavLink className='ra_bs_name'  to={`/bookstores/${review.bookstoreId}`}>
-                   Continue reading
+                <div className='ra_bookstorename_container'>
+                  <NavLink className='ra_bs_name' to={`/bookstores/${review.bookstoreId}`}>
+                    Continue reading
                   </NavLink>
                 </div>
 
